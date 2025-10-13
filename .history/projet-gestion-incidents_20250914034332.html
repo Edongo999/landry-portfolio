@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Détail du projet - Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Miniature active */
+    .thumb-active {
+      border: 3px solid #2563eb !important;
+      position: relative;
+    }
+    .thumb-active::after {
+      content: "✓";
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      background-color: #2563eb;
+      color: white;
+      font-size: 12px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    /* Numéro indicateur */
+    .thumb-number {
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      background-color: rgba(37,99,235,0.8);
+      color: white;
+      font-size: 12px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+     /* Animation apparence douce + explosion légère + pulsation subtile */
+  #portfolio-title {
+    animation: appearExplodePulse 3s ease-in-out infinite;
+  }
+
+  @keyframes appearExplodePulse {
+    0% {
+      opacity: 0;
+      transform: scale(0.97) translateY(-3px);
+      text-shadow: 0 0 0px #2563eb;
+    }
+    25% {
+      opacity: 0.6;
+      transform: scale(1) translateY(0);
+      text-shadow: 0 0 4px #2563eb;
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.03);
+      text-shadow: 0 0 8px #2563eb, 0 0 12px #2563eb;
+    }
+    75% {
+      transform: scale(1.05);
+      text-shadow: 0 0 12px #2563eb, 0 0 20px #2563eb, 0 0 28px #2563eb;
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+      text-shadow: 0 0 6px #2563eb, 0 0 12px #2563eb;
+    }
+  }
+
+  /* Effet lumière pulsante plus subtil */
+  #portfolio-title::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 4px;
+    box-shadow: 0 0 12px #2563eb, 0 0 18px #2563eb;
+    opacity: 0.2;
+    animation: pulseLight 3s ease-in-out infinite alternate;
+    pointer-events: none;
+  }
+
+  @keyframes pulseLight {
+    0% { opacity: 0.15; transform: scale(0.97); }
+    100% { opacity: 0.35; transform: scale(1.03); }
+  }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-white shadow p-4 sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <h1 class="text-xl md:text-2xl font-bold text-gray-900 relative overflow-hidden" id="portfolio-title">
+       Mon Portfolio
+    </h1>
+      <a href="index.html#projects" class="flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium">
+        <i class="fas fa-arrow-left"></i> Retour aux projets
+      </a>
+    </div>
+  </header>
+
+  <!-- Section Détail Projet -->
+  <section class="max-w-6xl mx-auto px-4 py-10">
+    <h2 class="text-3xl font-bold mb-6">Mini application desktop de gestion des incidents</h2>
+
+    <!-- Slider images -->
+    <div class="relative w-full max-h-[500px] mx-auto overflow-hidden rounded-lg shadow-lg mb-4 flex justify-center items-center bg-gray-100">
+      <div id="slide-container" class="w-full flex justify-center items-center"></div>
+      <button id="prevBtn" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black/50 text-white p-3 rounded-full z-10">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button id="nextBtn" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black/50 text-white p-3 rounded-full z-10">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+
+    <!-- Miniatures -->
+    <div class="flex justify-center gap-4 mb-8" id="thumbnails">
+      <div class="relative"><img src="assets/img/INCIDENTS/incident0.PNG" class="w-20 h-20 object-contain cursor-pointer border-2 border-gray-300 rounded"></div>
+      <div class="relative"><img src="assets/img/INCIDENTS/incident1.PNG" class="w-20 h-20 object-contain cursor-pointer border-2 border-gray-300 rounded"></div>
+      <div class="relative"><img src="assets/img/INCIDENTS/INCIDENT2.PNG" class="w-20 h-20 object-contain cursor-pointer border-2 border-gray-300 rounded"></div>
+      <div class="relative"><img src="assets/img/INCIDENTS/incident3.PNG" class="w-20 h-20 object-contain cursor-pointer border-2 border-gray-300 rounded"></div>
+      <div class="relative"><img src="assets/img/INCIDENTS/incident4.PNG" class="w-20 h-20 object-contain cursor-pointer border-2 border-gray-300 rounded"></div>
+      <div class="relative"><img src="assets/img/INCIDENTS/INCIDENT5.PNG" class="w-20 h-20 object-contain cursor-pointer border-2 border-gray-300 rounded"></div>
+    </div>
+
+    <!-- Description et boutons -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="md:col-span-2">
+        <h3 class="text-xl font-semibold mb-2">Description du projet</h3>
+        <p class="text-gray-600 mb-4">
+          Cette application desktop permet de centraliser et gérer efficacement les incidents signalés au sein d’une organisation. Elle offre la possibilité d’enregistrer, de suivre et de traiter chaque incident afin d’améliorer la réactivité et d’assurer une meilleure traçabilité.
+        </p>
+
+        <h3 class="text-xl font-semibold mb-2">Fonctionnalités principales</h3>
+        <ul class="list-disc pl-6 text-gray-600 mb-4">
+          <li>Enregistrement des incidents avec détails (type, catégorie, description, utilisateur concerné)</li>
+          <li>Suivi du statut des incidents (nouveau, en cours, résolu, archivé)</li>
+          <li>Gestion des utilisateurs et attribution de rôles (administrateur, agent, utilisateur)</li>
+          <li>Notifications internes pour les nouveaux incidents et mises à jour</li>
+          <li>Interface claire et conviviale facilitant la prise en main</li>
+        </ul>
+
+        <h3 class="text-xl font-semibold mb-2">Technologies utilisées</h3>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="flex items-center gap-1 px-3 py-1 bg-gray-200 rounded-lg">
+            <i class="fab fa-java text-red-600"></i> Python
+          </span>
+          <span class="flex items-center gap-1 px-3 py-1 bg-gray-200 rounded-lg">
+            <i class="fas fa-database text-blue-600"></i> MySQL
+          </span>
+          <span class="flex items-center gap-1 px-3 py-1 bg-gray-200 rounded-lg">
+            <i class="fas fa-desktop text-green-600"></i> Tkinter / PyQt
+          </span>
+        </div>
+      </div>
+
+      <!-- Boutons -->
+      <div class="space-y-4">
+       
+        <a href="https://github.com/toncompte/nom-du-projet" target="_blank" class="block w-full bg-blue-600 text-white py-3 rounded-lg text-center hover:bg-blue-700">
+          <i class="fas fa-code mr-2"></i> Code source
+        </a>
+      </div>
+    </div>
+  </section>
+
+<script>
+  const slides = [
+    { type: 'image', src: "assets/img/INCIDENTS/incident0.PNG" },
+    { type: 'image', src: "assets/img/INCIDENTS/incident1.PNG" },
+    { type: 'image', src: "assets/img/INCIDENTS/INCIDENT2.PNG" },
+    { type: 'image', src: "assets/img/INCIDENTS/incident3.PNG" },
+    { type: 'image', src: "assets/img/INCIDENTS/incident4.PNG" },
+    { type: 'image', src: "assets/img/INCIDENTS/INCIDENT5.PNG" },
+  ];
+
+  let index = 0;
+  let slideInterval;
+  let userInteracting = false;
+
+  const container = document.getElementById("slide-container");
+  const thumbContainers = document.querySelectorAll('#thumbnails > div');
+
+  function showSlide() {
+    container.innerHTML = '';
+    const slide = slides[index];
+    const img = document.createElement("img");
+    img.src = slide.src;
+    img.alt = "Capture du projet";
+    img.className = "w-auto max-h-[500px] object-contain rounded-lg transition-all duration-700";
+    container.appendChild(img);
+
+    // Mise à jour des miniatures
+    thumbContainers.forEach((div, i) => {
+        // Supprimer ancien numéro
+        const oldNum = div.querySelector('.thumb-number');
+        if(oldNum) oldNum.remove();
+
+        div.classList.toggle('thumb-active', i === index);
+
+        if(i === index){
+            const num = document.createElement('span');
+            num.className = 'thumb-number';
+            num.textContent = `${i+1}/${slides.length}`;
+            div.appendChild(num);
+        }
+    });
+  }
+
+  function nextSlide() { index = (index + 1) % slides.length; showSlide(); }
+  function prevSlide() { index = (index - 1 + slides.length) % slides.length; showSlide(); }
+  function goToSlide(i){ index = i; showSlide(); }
+
+  function startAutoSlide() { slideInterval = setInterval(()=>{ if(!userInteracting) nextSlide(); }, 20000); }
+  function stopAutoSlide(){ clearInterval(slideInterval); }
+
+  thumbContainers.forEach((div, i)=>{
+    div.addEventListener('click', ()=>{
+      userInteracting=true;
+      goToSlide(i);
+      setTimeout(()=>userInteracting=false,2000);
+    });
+  });
+
+  document.getElementById('prevBtn').addEventListener('click', ()=>{
+    userInteracting=true; prevSlide(); setTimeout(()=>userInteracting=false,2000);
+  });
+
+  document.getElementById('nextBtn').addEventListener('click', ()=>{
+    userInteracting=true; nextSlide(); setTimeout(()=>userInteracting=false,2000);
+  });
+
+  showSlide();
+  startAutoSlide();
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

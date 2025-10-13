@@ -1,0 +1,187 @@
+/* Blob background animation */
+.blob {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(
+    45deg,
+    rgba(14, 165, 233, 0.15) 0%,
+    rgba(124, 58, 237, 0.15) 100%
+  );
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  filter: blur(50px);
+  z-index: -1;
+  animation: blob-animate 15s ease-in-out infinite;
+}
+
+@keyframes blob-animate {
+  0%,
+  100% {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%;
+  }
+  50% {
+    transform: translate(50px, 50px) rotate(180deg);
+    border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%;
+  }
+  75% {
+    border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
+  }
+}
+
+/* Typewriter effect */
+.typewriter {
+  border-right: 2px solid;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #0ea5e9;
+  }
+}
+
+/* Timeline styling */
+.timeline-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -20px;
+  width: 2px;
+  height: 20px;
+  background-color: #e2e8f0;
+}
+
+.dark .timeline-item:not(:last-child)::after {
+  background-color: #334155;
+}
+
+/* Project card hover effect */
+.project-card:hover .project-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-overlay {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+}
+
+/* Skill icon hover effect */
+.skill-icon {
+  transition: all 0.3s ease;
+}
+
+.skill-icon:hover {
+  transform: translateY(-5px);
+}
+
+/* Section scroll animation */
+.section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+}
+
+.section-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Navigation link underline effect */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #0ea5e9;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.active-nav::after {
+  width: 100%;
+}
+
+#cursor {
+  display: inline-block;
+  color: #2563eb; /* adapte à ta palette */
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+
+/* Animation clignotante pour mobile */
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0.3; }
+}
+
+@media (max-width: 640px) {
+  .mobile-blink {
+    animation: blink 1s infinite;
+    color: orange;
+    z-index: 9999;
+  }
+}
+
+@media (max-width: 640px) { /* taille mobile */
+  #closeModal {
+    color: orange; /* couleur de la croix sur mobile */
+  }
+}
+
+
+/* Tooltip simple CSS */
+button[title] {
+  position: absolute; /* garde la croix en position absolue */
+  cursor: pointer;
+}
+
+button[title]:hover::after,
+button[title]:focus::after {
+  content: attr(title);
+  position: absolute;
+  top: -30px;
+  right: 0;
+  background: rgba(0,0,0,0.8);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 10000;
+}

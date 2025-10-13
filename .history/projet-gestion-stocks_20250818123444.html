@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Détail du projet - Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-white shadow p-4 sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-bold">Mon Portfolio</h1>
+      <a href="index.html" class="text-primary-600 hover:underline">← Retour</a>
+    </div>
+  </header>
+
+  <!-- Section Détail Projet -->
+  <section class="max-w-6xl mx-auto px-4 py-10">
+    <h2 class="text-3xl font-bold mb-6">Application Desktop de Gestion de Stock</h2>
+
+    <!-- Slider images -->
+    <div class="relative w-full max-h-[500px] mx-auto overflow-hidden rounded-lg shadow-lg mb-4 flex justify-center items-center bg-gray-100">
+      <div id="slide-container" class="w-full flex justify-center items-center"></div>
+      <button onclick="prevSlide()" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black/50 text-white p-3 rounded-full z-10">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button onclick="nextSlide()" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black/50 text-white p-3 rounded-full z-10">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+
+    <!-- Miniatures -->
+    <div class="flex justify-center gap-4 mb-8">
+      <img src="assets/img/gestion de stock1.png" class="w-20 h-20 object-contain cursor-pointer border-2 border-primary-600 rounded" onclick="goToSlide(0)">
+      <img src="assets/img/gestion de stock2.png" class="w-20 h-20 object-contain cursor-pointer border-2 border-gray-300 rounded" onclick="goToSlide(1)">
+      <img src="assets/img/stock3.png" class="w-20 h-20 object-contain cursor-pointer border-2 border-gray-300 rounded" onclick="goToSlide(2)">
+    </div>
+
+    <!-- Description et boutons -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="md:col-span-2">
+        <h3 class="text-xl font-semibold mb-2">Description du projet</h3>
+        <p class="text-gray-600 mb-4">
+          Cette application desktop permet de gérer efficacement le stock d’une entreprise. 
+          Elle inclut l’ajout, la modification et la suppression de produits, ainsi que le suivi des entrées et sorties.
+        </p>
+
+        <h3 class="text-xl font-semibold mb-2">Fonctionnalités principales</h3>
+        <ul class="list-disc pl-6 text-gray-600 mb-4">
+          <li>Ajout, modification et suppression de produits</li>
+          <li>Gestion des entrées et sorties de stock</li>
+          <li>Alertes pour produits faibles en quantité</li>
+          <li>Interface intuitive et ergonomique</li>
+        </ul>
+
+        <h3 class="text-xl font-semibold mb-2">Technologies utilisées</h3>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="flex items-center gap-1 px-3 py-1 bg-gray-200 rounded-lg">
+            <i class="fab fa-java text-red-600"></i> Java
+          </span>
+          <span class="flex items-center gap-1 px-3 py-1 bg-gray-200 rounded-lg">
+            <i class="fas fa-database text-blue-600"></i> MySQL
+          </span>
+          <span class="flex items-center gap-1 px-3 py-1 bg-gray-200 rounded-lg">
+            <i class="fas fa-window-maximize text-green-600"></i> Java Swing
+          </span>
+        </div>
+      </div>
+
+      <!-- Boutons -->
+      <div class="space-y-4">
+        <a href="projet-gestion-stock.html" class="block w-full bg-primary-600 text-white py-3 rounded-lg text-center hover:bg-primary-700">
+          <i class="fas fa-play mr-2"></i> Voir la démo
+        </a>
+      </div>
+    </div>
+  </section>
+
+<script>
+  const slides = [
+    { type: 'image', src: "assets/img/gestion de stock1.png" },
+    { type: 'image', src: "assets/img/gestion de stock2.png" },
+    { type: 'image', src: "assets/img/stock3.png" },
+  ];
+  let index = 0;
+  let slideInterval;
+  let userInteracting = false;
+
+  const container = document.getElementById("slide-container");
+
+  function showSlide() {
+    container.innerHTML = '';
+    const slide = slides[index];
+    const img = document.createElement("img");
+    img.src = slide.src;
+    img.alt = "Capture du projet";
+    img.className = "w-auto max-h-[500px] object-contain rounded-lg transition-all duration-700";
+    container.appendChild(img);
+
+    // Mise à jour des miniatures
+    const thumbs = document.querySelectorAll('.flex.justify-center img');
+    thumbs.forEach((img, i) => {
+      img.classList.toggle('border-primary-600', i === index);
+      img.classList.toggle('border-gray-300', i !== index);
+    });
+  }
+
+  function nextSlide() { index = (index + 1) % slides.length; showSlide(); }
+  function prevSlide() { index = (index - 1 + slides.length) % slides.length; showSlide(); }
+  function goToSlide(i){ index = i; showSlide(); }
+
+  function startAutoSlide() {
+    slideInterval = setInterval(()=>{ if(!userInteracting) nextSlide(); }, 20000);
+  }
+
+  const slideWrapper = document.querySelector('.relative');
+  const thumbnails = document.querySelectorAll('.flex.justify-center img');
+
+  slideWrapper.addEventListener('mouseenter', () => userInteracting = true);
+  slideWrapper.addEventListener('mouseleave', () => userInteracting = false);
+
+  thumbnails.forEach((thumb, i)=>{
+    thumb.addEventListener('click', ()=>{
+      userInteracting = true;
+      goToSlide(i);
+      setTimeout(()=> userInteracting=false,2000);
+    });
+  });
+
+  document.querySelector('.absolute.left-4').addEventListener('click', ()=>{
+    userInteracting=true;
+    prevSlide();
+    setTimeout(()=> userInteracting=false,2000);
+  });
+  document.querySelector('.absolute.right-4').addEventListener('click', ()=>{
+    userInteracting=true;
+    nextSlide();
+    setTimeout(()=> userInteracting=false,2000);
+  });
+
+  showSlide();
+  startAutoSlide();
+</script>
+</body>
+</html>

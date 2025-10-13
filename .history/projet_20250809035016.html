@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mes Projets - Portfolio</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css"
+    rel="stylesheet"
+  />
+  <script
+    src="https://kit.fontawesome.com/a076d05399.js"
+    crossorigin="anonymous"
+    defer
+  ></script>
+  <style>
+    .project-card {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      transition: box-shadow 0.3s ease;
+    }
+    .project-card:hover {
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+    .project-overlay {
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+      text-align: center;
+      color: white;
+      pointer-events: none;
+      border-radius: 1rem;
+    }
+    .project-card:hover .project-overlay {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 dark:bg-dark-900 text-gray-900 dark:text-gray-100">
+
+  <header class="bg-white dark:bg-dark-800 shadow sticky top-0 z-20">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Mon Portfolio</h1>
+      <nav>
+        <a href="index.html" class="px-3 py-2 hover:text-primary-600 dark:hover:text-primary-400">Accueil</a>
+        <a href="projets.html" class="px-3 py-2 text-primary-600 dark:text-primary-400 font-semibold">Projets</a>
+        <a href="contact.html" class="px-3 py-2 hover:text-primary-600 dark:hover:text-primary-400">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-6 py-16">
+    <h2 class="text-4xl font-bold text-center mb-12">
+      Mes <span class="text-primary-600 dark:text-primary-400">Projets</span>
+    </h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      
+      <!-- Projet 1 -->
+      <div
+        class="project-card bg-white dark:bg-dark-900 rounded-xl shadow-lg transition-shadow duration-300"
+        data-category="design"
+      >
+        <div class="h-48 overflow-hidden rounded-t-xl">
+          <img
+            src="assets/img/couverture.png"
+            alt="Flyer promotionnel 2JM Counselling"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">Flyer promotionnel 2JM Counselling</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-4">
+            Création d’un flyer publicitaire professionnel pour la société 2JM Counselling Inter'activ.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Photoshop</span>
+            <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Illustrator</span>
+            <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Design graphique</span>
+          </div>
+          <div class="project-overlay">
+            <h3 class="text-lg font-semibold mb-2">Flyer promotionnel 2JM Counselling</h3>
+            <p class="mb-6 text-sm">
+              Flyer conçu avec un design soigné et adapté à la communication de l’entreprise.
+            </p>
+            <div class="flex space-x-3">
+              <button
+                class="voir-design-btn px-4 py-2 bg-primary-600 hover:bg-primary-700 rounded-lg font-medium transition-colors"
+                data-image="assets/img/couverture.png"
+                data-caption="Flyer promotionnel 2JM Counselling"
+              >
+                Voir le design
+              </button>
+              <a
+                href="assets/img/couverture.png"
+                download
+                class="px-4 py-2 border border-white rounded-lg font-medium hover:bg-white/10 transition-colors"
+              >
+                Télécharger
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet 2 -->
+      <div
+        class="project-card bg-white dark:bg-dark-900 rounded-xl shadow-lg transition-shadow duration-300"
+        data-category="design"
+      >
+        <div class="h-48 overflow-hidden rounded-t-xl">
+          <img
+            src="assets/img/SUICIDE.png"
+            alt="Flyer prévention suicide - 2JM Counselling"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">Flyer prévention suicide</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-4">
+            Flyer éducatif pour sensibiliser à la prévention du suicide, réalisé pour 2JM Counselling Inter'activ.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Photoshop</span>
+            <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Illustrator</span>
+            <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Design graphique</span>
+          </div>
+          <div class="project-overlay">
+            <h3 class="text-lg font-semibold mb-2">Flyer prévention suicide</h3>
+            <p class="mb-6 text-sm">
+              Flyer conçu pour éduquer et sensibiliser la population à un sujet important.
+            </p>
+            <div class="flex space-x-3">
+              <button
+                class="voir-design-btn px-4 py-2 bg-primary-600 hover:bg-primary-700 rounded-lg font-medium transition-colors"
+                data-image="assets/img/SUICIDE.png"
+                data-caption="Flyer prévention suicide"
+              >
+                Voir le design
+              </button>
+              <a
+                href="assets/img/SUICIDE.png"
+                download
+                class="px-4 py-2 border border-white rounded-lg font-medium hover:bg-white/10 transition-colors"
+              >
+                Télécharger
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet 3 -->
+      <div
+        class="project-card bg-white dark:bg-dark-900 rounded-xl shadow-lg transition-shadow duration-300"
+        data-category="design"
+      >
+        <div class="h-48 overflow-hidden rounded-t-xl">
+          <img
+            src="assets/img/SLEEP.png"
+            alt="Flyer prévention troubles du sommeil - 2JM Counselling"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">Flyer – Troubles du sommeil</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-4">
+            Flyer informatif pour sensibiliser aux troubles du sommeil, réalisé pour 2JM Counselling Inter'activ.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Photoshop</span>
+            <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">InDesign</span>
+            <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Design graphique</span>
+          </div>
+          <div class="project-overlay">
+            <h3 class="text-lg font-semibold mb-2">Flyer – Troubles du sommeil</h3>
+            <p class="mb-6 text-sm">
+              Flyer conçu pour informer et guider vers des solutions pratiques pour améliorer le sommeil.
+            </p>
+            <div class="flex space-x-3">
+              <button
+                class="voir-design-btn px-4 py-2 bg-primary-600 hover:bg-primary-700 rounded-lg font-medium transition-colors"
+                data-image="assets/img/SLEEP.png"
+                data-caption="Flyer – Troubles du sommeil"
+              >
+                Voir le design
+              </button>
+              <a
+                href="assets/img/SLEEP.png"
+                download
+                class="px-4 py-2 border border-white rounded-lg font-medium hover:bg-white/10 transition-colors"
+              >
+                Télécharger
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet 4 -->
+      <div
+        class="project-card bg-white dark:bg-dark-900 rounded-xl shadow-lg transition-shadow duration-300"
+        data-category="design"
+      >
+        <div class="h-48 overflow-hidden rounded-t-xl">
+          <img
+            src="assets/img/SERVICES_2JM.png"
+            alt="Flyer services 2JM Counselling"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">Flyer promotion des services 2JM Counselling</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-4">
+            Flyer réalisé pour mettre en avant les services proposés par 2JM Counselling Inter'activ.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Photoshop</span>
+            <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Design graphique</span>
+          </div>
+          <div class="project-overlay">
+            <h3 class="text-lg font-semibold mb-2">Flyer promotion des services 2JM Counselling</h3>
+            <p class="mb-6 text-sm">
+              Flyer pour communiquer efficacement sur les prestations de l’entreprise.
+            </p>
+            <div class="flex space-x-3">
+              <button
+                class="voir-design-btn px-4 py-2 bg-primary-600 hover:bg-primary-700 rounded-lg font-medium transition-colors"
+                data-image="assets/img/SERVICES_2JM.png"
+                data-caption="Flyer promotion des services 2JM Counselling"
+              >
+                Voir le design
+              </button>
+              <a
+                href="assets/img/SERVICES_2JM.png"
+                download
+                class="px-4 py-2 border border-white rounded-lg font-medium hover:bg-white/10 transition-colors"
+              >
+                Télécharger
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet 5 -->
+      <div
+        class="project-card bg-white dark:bg-dark-900 rounded-xl shadow-lg transition-shadow duration-300"
+        data-category="design"
+      >
+        <div class="h-48 overflow-hidden rounded-t-xl">
+          <img
+            src="assets/img/COIFFURE.png"
+            alt="Flyer coiffure féminine"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">Flyer promotion coiffure féminine</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-4">
+            Flyer réalisé pour promouvoir les services d’une cliente dans la coiffure féminine.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Photoshop</span>
+            <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Design graphique</span>
+          </div>
+          <div class="project-overlay">
+            <h3 class="text-lg font-semibold mb-2">Flyer promotion coiffure féminine</h3>
+            <p class="mb-6 text-sm">
+              Flyer attractif pour valoriser les prestations de coiffure pour femmes.
+            </p>
+            <div class="flex space-x-3">
+              <button
+                class="voir-design-btn px-4 py-2 bg-primary-600 hover:bg-primary-700 rounded-lg font-medium transition-colors"
+                data-image="assets/img/COIFFURE.png"
+                data-caption="Flyer coiffure féminine"
+              >
+                Voir le design
+              </button>
+              <a
+                href="assets/img/COIFFURE.png"
+                download
+                class="px-4 py-2 border border-white rounded-lg font-medium hover:bg-white/10 transition-colors"
+              >
+                Télécharger
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet 6 -->
+      <div
+        class="project-card bg-white dark:bg-dark-900 rounded-xl shadow-lg transition-shadow duration-300"
+        data-category="design"
+      >
+        <div class="h-48 overflow-hidden rounded-t-xl">
+          <img
+            src="assets/img/COUTURE.png"
+            alt="Flyer couture"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">Flyer couture</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-4">
+            Flyer réalisé pour promouvoir les services d’une cliente dans la couture.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+  
+            <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Photoshop</span>
+            <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Design graphique</span>
+          </div>
+          <div class="project-overlay">
+            <h3 class="text-lg font-semibold mb-2">Flyer couture</h3>
+            <p class="mb-6 text-sm">
+              Flyer réalisé pour promouvoir les services d’une cliente dans la couture.
+            </p>
+            <div class="flex space-x-3">
+              <button
+                class="voir-design-btn px-4 py-2 bg-primary-600 hover:bg-primary-700 rounded-lg font-medium transition-colors"
+                data-image="assets/img/COUTURE.png"
+                data-caption="Flyer couture"
+              >
+                Voir le design
+              </button>
+              <a
+                href="assets/img/COUTURE.png"
+                download
+                class="px-4 py-2 border border-white rounded-lg font-medium hover:bg-white/10 transition-colors"
+              >
+                Télécharger
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet 7 -->
+      <div
+        class="project-card bg-white dark:bg-dark-900 rounded-xl shadow-lg transition-shadow duration-300"
+        data-category="design"
+      >
+        <div class="h-48 overflow-hidden rounded-t-xl">
+          <img
+            src="assets/img/REPETITION.png"
+            alt="Flyer centre de répétition"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">Flyer centre de répétition</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-4">
+            Flyer réalisé pour mon centre de répétition spécialisé dans l’enseignement général et technique.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Photoshop</span>
+            <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Design graphique</span>
+          </div>
+          <div class="project-overlay">
+            <h3 class="text-lg font-semibold mb-2">Flyer centre de répétition</h3>
+            <p class="mb-6 text-sm">
+              Flyer destiné à promouvoir les services pédagogiques de mon centre de répétition.
+            </p>
+            <div class="flex space-x-3">
+              <button
+                class="voir-design-btn px-4 py-2 bg-primary-600 hover:bg-primary-700 rounded-lg font-medium transition-colors"
+                data-image="assets/img/REPETITION.png"
+                data-caption="Flyer centre de répétition"
+              >
+                Voir le design
+              </button>
+              <a
+                href="assets/img/REPETITION.png"
+                download
+                class="px-4 py-2 border border-white rounded-lg font-medium hover:bg-white/10 transition-colors"
+              >
+                Télécharger
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet 8 -->
+      <div
+        class="project-card bg-white dark:bg-dark-900 rounded-xl shadow-lg transition-shadow duration-300"
+        data-category="design"
+      >
+        <div class="h-48 overflow-hidden rounded-t-xl">
+          <img
+            src="assets/img/RENTRÉE.png"
+            alt="Flyer rentrée scolaire"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">Flyer rentrée scolaire</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-4">
+            Flyer d’un centre proposant des cours à domicile et en centre, pour informer les parents de la rentrée.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Photoshop</span>
+            <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Design graphique</span>
+          </div>
+          <div class="project-overlay">
+            <h3 class="text-lg font-semibold mb-2">Flyer rentrée scolaire</h3>
+            <p class="mb-6 text-sm">
+              Flyer pour attirer l’attention des parents sur l’importance d’inscrire leurs enfants.
+            </p>
+            <div class="flex space-x-3">
+              <button
+                class="voir-design-btn px-4 py-2 bg-primary-600 hover:bg-primary-700 rounded-lg font-medium transition-colors"
+                data-image="assets/img/RENTRÉE.png"
+                data-caption="Flyer rentrée scolaire"
+              >
+                Voir le design
+              </button>
+              <a
+                href="assets/img/RENTRÉE.png"
+                download
+                class="px-4 py-2 border border-white rounded-lg font-medium hover:bg-white/10 transition-colors"
+              >
+                Télécharger
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Modal pour afficher l’image en grand -->
+  <div
+    id="modal"
+    class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center opacity-0 pointer-events-none transition-opacity"
+  >
+    <div class="relative max-w-3xl w-full p-4">
+      <button
+        id="close-modal"
+        class="absolute top-2 right-2 text-white text-3xl font-bold hover:text-primary-600"
+        aria-label="Fermer la fenêtre"
+      >
+        &times;
+      </button>
+      <img
+        id="modal-image"
+        src=""
+        alt=""
+        class="rounded-lg max-h-[80vh] w-full object-contain"
+      />
+      <p id="modal-caption" class="text-white mt-4 text-center"></p>
+    </div>
+  </div>
+
+  <script>
+    // Gestion du modal "Voir le design"
+    document.querySelectorAll(".voir-design-btn").forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        const imageSrc = btn.getAttribute("data-image");
+        const caption = btn.getAttribute("data-caption");
+        const modal = document.getElementById("modal");
+        const modalImage = document.getElementById("modal-image");
+        const modalCaption = document.getElementById("modal-caption");
+
+        modalImage.src = imageSrc;
+        modalImage.alt = caption;
+        modalCaption.textContent = caption;
+
+        modal.classList.remove("opacity-0", "pointer-events-none");
+      });
+    });
+
+    document.getElementById("close-modal").addEventListener("click", () => {
+      const modal = document.getElementById("modal");
+      modal.classList.add("opacity-0", "pointer-events-none");
+    });
+
+    // Fermer le modal si clic hors image
+    document.getElementById("modal").addEventListener("click", (e) => {
+      if (e.target.id === "modal") {
+        e.currentTarget.classList.add("opacity-0", "pointer-events-none");
+      }
+    });
+  </script>
+</body>
+</html>

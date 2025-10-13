@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <!-- ========== META TAGS ========== -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Professional portfolio showcasing my skills, projects, and experience as a web developer."
+    />
+    <meta
+      name="keywords"
+      content="portfolio, web developer, frontend, JavaScript, React, HTML, CSS"
+    />
+    <title>Alex Carter | Web Developer Portfolio</title>
+
+    <!-- ========== FAVICON ========== -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>"
+    />
+
+    <!-- ========== CSS & FONTS ========== -->
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- ========== TAILWIND CONFIG ========== -->
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              mono: ["Fira Code", "monospace"],
+            },
+            colors: {
+              primary: {
+                50: "#f0f9ff",
+                100: "#e0f2fe",
+                200: "#bae6fd",
+                300: "#7dd3fc",
+                400: "#38bdf8",
+                500: "#0ea5e9",
+                600: "#0284c7",
+                700: "#0369a1",
+                800: "#075985",
+                900: "#0c4a6e",
+              },
+              dark: {
+                900: "#0f172a",
+                800: "#1e293b",
+                700: "#334155",
+                600: "#475569",
+              },
+            },
+            animation: {
+              float: "float 6s ease-in-out infinite",
+              "float-reverse": "float-reverse 6s ease-in-out infinite",
+            },
+            keyframes: {
+              float: {
+                "0%, 100%": { transform: "translateY(0)" },
+                "50%": { transform: "translateY(-20px)" },
+              },
+              "float-reverse": {
+                "0%, 100%": { transform: "translateY(-20px)" },
+                "50%": { transform: "translateY(0)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- ========== CUSTOM STYLES ========== -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body
+    class="bg-white dark:bg-dark-900 text-gray-800 dark:text-gray-200 font-sans transition-colors duration-300"
+  >
+    <!-- ========== HEADER & NAVIGATION ========== -->
+    <header
+      class="fixed w-full z-50 bg-white/80 dark:bg-dark-900/80 backdrop-blur-md shadow-sm"
+    >
+      <nav class="container mx-auto px-6 py-4">
+        <div class="flex justify-between items-center">
+          <!-- Logo -->
+          <a
+            href="#"
+            class="text-2xl font-bold text-primary-600 dark:text-primary-400"
+            >SK.</a
+          >
+
+         
+          <!-- Desktop Navigation -->
+           <!-- Navigation Desktop -->
+          <div class="hidden md:flex space-x-8">
+            <a href="#home" class="nav-link active-nav">Accueil</a>
+            <a href="#about" class="nav-link">À propos</a>
+            <a href="#skills" class="nav-link">Compétences</a>
+            <a href="#projects" class="nav-link">Réalisations</a>
+            <a href="#experience" class="nav-link">Expérience</a>
+            <a href="#contact" class="nav-link">Contact</a>
+          </div>
+
+
+
+          <!-- Theme Toggle & Mobile Menu Button -->
+          <div class="flex items-center space-x-4">
+            <button
+              id="theme-toggle"
+              class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-dark-700 transition-colors"
+            >
+              <i class="fas fa-moon dark:hidden"></i>
+              <i class="fas fa-sun hidden dark:block"></i>
+            </button>
+
+            <button
+              id="mobile-menu-button"
+              class="md:hidden p-2 rounded-full hover:bg-gray-200 dark:hover:bg-dark-700 transition-colors"
+            >
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-4 pb-4">
+          <a href="#home" class="block nav-link active-nav">Accueil/a>
+          <a href="#about" class="block nav-link">À propos</a>
+          <a href="#skills" class="block nav-link">Compétences</a>
+          <a href="#projects" class="block nav-link">Réalisations</a>
+          <a href="#experience" class="block nav-link">Expérience</a>
+          <a href="#contact" class="block nav-link">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section
+      id="home"
+      class="min-h-screen flex items-center relative overflow-hidden pt-20"
+    >
+      <!-- Background blobs -->
+      <div class="blob top-1/4 -left-1/4"></div>
+      <div class="blob bottom-1/4 -right-1/4 animation-delay-3000"></div>
+
+      <div
+        class="container mx-auto px-6 py-20 flex flex-col md:flex-row items-center"
+      >
+      
+
+
+
+
+
+        <!-- Contenu Hero -->
+<div class="md:w-1/2 mb-12 md:mb-0">
+  <h1 class="text-4xl md:text-6xl font-bold mb-4">
+    Salut, je suis
+    <span class="text-primary-600 dark:text-primary-400">Edongo Amengne</span>
+  </h1>
+  <h2 class="text-2xl md:text-3xl font-semibold mb-6">
+    <span class="typewriter" id="typed-text"></span>
+    <span id="cursor">|</span>
+  </h2>
+
+  <p class="text-lg mb-8 max-w-lg">
+    Je crée des expériences digitales exceptionnelles, rapides, accessibles et visuellement attractives.  
+    Je me concentre actuellement sur la création d’applications web responsives avec des technologies modernes.
+  </p>
+  <div class="flex space-x-4">
+    <a
+      href="#projects"
+      class="px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors"
+    >
+      Voir mes projets
+    </a>
+    <a
+      href="#contact"
+      class="px-6 py-3 border border-primary-600 text-primary-600 hover:bg-primary-50 dark:hover:bg-dark-800 rounded-lg font-medium transition-colors"
+    >
+      Contactez-moi
+    </a>
+  </div>
+</div>
+
+
+        <!-- Hero image -->
+        <div class="md:w-1/2 flex justify-center">
+          <div class="relative w-64 h-64 md:w-80 md:h-80">
+            <div
+              class="absolute inset-0 bg-primary-100 dark:bg-primary-900 rounded-full opacity-20 animate-pulse"
+            ></div>
+            <img
+              src="assets/img/landry.png"
+              alt="Alex Carter"
+              class="relative w-full h-full object-cover rounded-full border-4 border-primary-500 shadow-lg"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SECTION À PROPOS ========== -->
+      <section id="about" class="py-20 bg-gray-50 dark:bg-dark-800 section">
+        <div class="container mx-auto px-6">
+          <h2 class="text-3xl font-bold text-center mb-12">
+            À propos de <span class="text-primary-600 dark:text-primary-400">Moi</span>
+          </h2>
+
+          <div class="flex flex-col md:flex-row items-center gap-12">
+            <!-- Image de présentation -->
+            <div class="md:w-1/3 flex justify-center">
+              <div class="relative w-64 h-64">
+                <div class="absolute -inset-4 bg-primary-500 rounded-2xl -rotate-6"></div>
+                <img
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
+                  alt="Landry Amengne"
+                  class="relative w-full h-full object-cover rounded-2xl shadow-lg"
+                />
+              </div>
+            </div>
+
+            <!-- Contenu de présentation -->
+            <div class="md:w-2/3">
+              <h3 class="text-2xl font-semibold mb-4">Qui suis-je ?</h3>
+              <p class="mb-4 text-gray-700 dark:text-gray-300">
+                Je suis un développeur fullstack et designer graphique polyvalent, passionné par la création
+                d'applications web et desktop modernes, ainsi que de supports visuels professionnels.
+                Mon parcours m’a permis de travailler à la fois sur des projets d’entreprise et personnels.
+              </p>
+              <p class="mb-6 text-gray-700 dark:text-gray-300">
+                J’ai une solide expérience en développement web (HTML, CSS, JavaScript, PHP, MySQL),
+                mais aussi en design avec des outils comme Figma, Illustrator et Photoshop. J’aime concevoir des interfaces intuitives,
+                performantes et adaptées aux besoins des utilisateurs.
+              </p>
+
+              <!-- Valeurs -->
+              <div class="mb-8">
+                <h4 class="text-xl font-semibold mb-3">Mes valeurs</h4>
+                <div class="flex flex-wrap gap-3">
+                  <span
+                    class="px-3 py-1 bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 rounded-full text-sm">
+                    Code propre
+                  </span>
+                  <span
+                    class="px-3 py-1 bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 rounded-full text-sm">
+                    Expérience utilisateur
+                  </span>
+                  <span
+                    class="px-3 py-1 bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 rounded-full text-sm">
+                    Accessibilité
+                  </span>
+                  <span
+                    class="px-3 py-1 bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 rounded-full text-sm">
+                    Apprentissage continu
+                  </span>
+                </div>
+              </div>
+
+              <!-- Bouton téléchargement CV -->
+              <a
+                href="fichiers/CV_Landry_Amengne.pdf"
+                class="inline-flex items-center px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors"
+                download
+              >
+                Télécharger mon CV
+                <i class="fas fa-download ml-2"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+   <!-- ========== SECTION COMPÉTENCES ========== -->
+<section id="skills" class="py-20 section">
+  <div class="container mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center mb-12">
+      Mes <span class="text-primary-600 dark:text-primary-400">Compétences</span>
+    </h2>
+
+    <!-- Filtres des compétences -->
+    <div class="mb-8 flex justify-center">
+      <div
+        class="inline-flex rounded-lg border border-gray-200 dark:border-dark-700 overflow-hidden"
+      >
+        <button
+          class="skill-filter px-4 py-2 bg-primary-600 text-white"
+          data-category="all"
+        >
+          Toutes
+        </button>
+        <button
+          class="skill-filter px-4 py-2 hover:bg-gray-100 dark:hover:bg-dark-700"
+          data-category="frontend"
+        >
+          Frontend
+        </button>
+        <button
+          class="skill-filter px-4 py-2 hover:bg-gray-100 dark:hover:bg-dark-700"
+          data-category="backend"
+        >
+          Backend
+        </button>
+        <button
+          class="skill-filter px-4 py-2 hover:bg-gray-100 dark:hover:bg-dark-700"
+          data-category="tools"
+        >
+          Outils
+        </button>
+      </div>
+    </div>
+
+    <!-- Grille des compétences -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+      <!-- Frontend -->
+      <div class="skill-card frontend" data-category="frontend">
+        <div class="skill-icon bg-white dark:bg-dark-800 p-4 rounded-xl shadow-md hover:shadow-lg h-full flex flex-col items-center justify-center">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="w-12 h-12 mb-3" />
+          <span class="font-medium">HTML5</span>
+        </div>
+      </div>
+
+      <div class="skill-card frontend" data-category="frontend">
+        <div class="skill-icon bg-white dark:bg-dark-800 p-4 rounded-xl shadow-md hover:shadow-lg h-full flex flex-col items-center justify-center">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="w-12 h-12 mb-3" />
+          <span class="font-medium">CSS3</span>
+        </div>
+      </div>
+
+      <div class="skill-card frontend" data-category="frontend">
+        <div class="skill-icon bg-white dark:bg-dark-800 p-4 rounded-xl shadow-md hover:shadow-lg h-full flex flex-col items-center justify-center">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="w-12 h-12 mb-3" />
+          <span class="font-medium">JavaScript</span>
+        </div>
+      </div>
+
+      <div class="skill-card frontend" data-category="frontend">
+        <div class="skill-icon bg-white dark:bg-dark-800 p-4 rounded-xl shadow-md hover:shadow-lg h-full flex flex-col items-center justify-center">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="w-12 h-12 mb-3" />
+          <span class="font-medium">React</span>
+        </div>
+      </div>
+
+      <div class="skill-card frontend" data-category="frontend">
+        <div class="skill-icon bg-white dark:bg-dark-800 p-4 rounded-xl shadow-md hover:shadow-lg h-full flex flex-col items-center justify-center">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" alt="Tailwind CSS" class="w-12 h-12 mb-3" />
+          <span class="font-medium">Tailwind CSS</span>
+        </div>
+      </div>
+
+      <!-- Backend -->
+      <div class="skill-card backend" data-category="backend">
+        <div class="skill-icon bg-white dark:bg-dark-800 p-4 rounded-xl shadow-md hover:shadow-lg h-full flex flex-col items-center justify-center">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" class="w-12 h-12 mb-3" />
+          <span class="font-medium">Node.js</span>
+        </div>
+      </div>
+
+      <div class="skill-card backend" data-category="backend">
+        <div class="skill-icon bg-white dark:bg-dark-800 p-4 rounded-xl shadow-md hover:shadow-lg h-full flex flex-col items-center justify-center">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express" class="w-12 h-12 mb-3" />
+          <span class="font-medium">Express</span>
+        </div>
+      </div>
+
+      <div class="skill-card backend" data-category="backend">
+        <div class="skill-icon bg-white dark:bg-dark-800 p-4 rounded-xl shadow-md hover:shadow-lg h-full flex flex-col items-center justify-center">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" class="w-12 h-12 mb-3" />
+          <span class="font-medium">MongoDB</span>
+        </div>
+      </div>
+
+      <!-- Outils -->
+      <div class="skill-card tools" data-category="tools">
+        <div class="skill-icon bg-white dark:bg-dark-800 p-4 rounded-xl shadow-md hover:shadow-lg h-full flex flex-col items-center justify-center">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="w-12 h-12 mb-3" />
+          <span class="font-medium">Git</span>
+        </div>
+      </div>
+
+      <div class="skill-card tools" data-category="tools">
+        <div class="skill-icon bg-white dark:bg-dark-800 p-4 rounded-xl shadow-md hover:shadow-lg h-full flex flex-col items-center justify-center">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" class="w-12 h-12 mb-3" />
+          <span class="font-medium">VS Code</span>
+        </div>
+      </div>
+
+      <div class="skill-card tools" data-category="tools">
+        <div class="skill-icon bg-white dark:bg-dark-800 p-4 rounded-xl shadow-md hover:shadow-lg h-full flex flex-col items-center justify-center">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" class="w-12 h-12 mb-3" />
+          <span class="font-medium">Figma</span>
+        </div>
+      </div>
+
+      <div class="skill-card tools" data-category="tools">
+        <div class="skill-icon bg-white dark:bg-dark-800 p-4 rounded-xl shadow-md hover:shadow-lg h-full flex flex-col items-center justify-center">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" alt="npm" class="w-12 h-12 mb-3" />
+          <span class="font-medium">npm</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    
+
+<!-- ======== MES RÉALISATIONS ======== -->
+<!-- ========== SECTION PROJETS ========== -->
+<section id="projects" class="py-20 bg-gray-50 dark:bg-dark-800 section">
+  <div class="container mx-auto px-6">
+
+    <h2 class="text-3xl font-bold text-center mb-6">
+      <span class="text-primary-600 dark:text-primary-400">Mes projets</span>
+    </h2>
+
+    <!-- Boutons de filtre -->
+    <div class="flex justify-center mb-12 space-x-4">
+      <button
+        class="filter-btn px-4 py-2 bg-primary-600 text-white rounded-lg font-medium transition-colors hover:bg-primary-700"
+        data-filter="all"
+      >
+        Tous
+      </button>
+      <button
+        class="filter-btn px-4 py-2 bg-gray-200 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded-lg font-medium transition-colors hover:bg-primary-600 hover:text-white"
+        data-filter="dev"
+      >
+        Développement
+      </button>
+      <button
+        class="filter-btn px-4 py-2 bg-gray-200 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded-lg font-medium transition-colors hover:bg-primary-600 hover:text-white"
+        data-filter="design"
+      >
+        Design graphique
+      </button>
+    </div>
+
+    <!-- Grille des projets -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Projet Dev 1 -->
+      <div
+        class="project-card bg-white dark:bg-dark-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 relative"
+        data-category="dev"
+      >
+        <div class="h-48 overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+            alt="Tableau de bord e-commerce"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">Tableau de bord E-commerce</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-4">
+            Un tableau de bord complet pour les entreprises e-commerce incluant des statistiques, la gestion des produits et le suivi des commandes.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">React</span>
+            <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Node.js</span>
+            <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">MongoDB</span>
+            <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Chart.js</span>
+          </div>
+          <div
+            class="project-overlay absolute inset-0 bg-black/80 flex flex-col justify-center items-center p-6"
+          >
+            <h3 class="text-white text-xl font-bold mb-2">Tableau de bord E-commerce</h3>
+            <p class="text-gray-300 text-center mb-4">
+              Interface intuitive avec visualisation de données, gestion des stocks et suivi client.
+            </p>
+            <div class="flex space-x-3">
+              <a
+                href="#"
+                class="px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors"
+              >Voir le projet</a>
+              <a
+                href="#"
+                class="px-4 py-2 border border-white text-white hover:bg-white/10 rounded-lg font-medium transition-colors"
+              >Code source</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet Dev 2 -->
+      <div
+        class="project-card bg-white dark:bg-dark-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 relative"
+        data-category="dev"
+      >
+        <div class="h-48 overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1559028012-481c04fa702d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1636&q=80"
+            alt="Application de gestion de tâches"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">Gestionnaire de tâches collaboratif</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-4">
+            Une application de gestion de tâches avec mises à jour en temps réel, glisser-déposer et travail d’équipe.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Vue.js</span>
+            <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Firebase</span>
+            <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Tailwind CSS</span>
+            <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Vuex</span>
+          </div>
+          <div
+            class="project-overlay absolute inset-0 bg-black/80 flex flex-col justify-center items-center p-6"
+          >
+            <h3 class="text-white text-xl font-bold mb-2">Gestionnaire de tâches</h3>
+            <p class="text-gray-300 text-center mb-4">
+              Suivi de tâches en équipe avec notifications instantanées et interface intuitive.
+            </p>
+            <div class="flex space-x-3">
+              <a
+                href="#"
+                class="px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors"
+              >Voir le projet</a>
+              <a
+                href="#"
+                class="px-4 py-2 border border-white text-white hover:bg-white/10 rounded-lg font-medium transition-colors"
+              >Code source</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet Dev 3 -->
+      <div
+        class="project-card bg-white dark:bg-dark-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 relative"
+        data-category="dev"
+      >
+        <div class="h-48 overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+            alt="Chercheur de recettes"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">Chercheur de recettes</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-4">
+            Une application pour trouver des recettes à partir des ingrédients disponibles, avec infos nutritionnelles et étapes détaillées.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">React</span>
+            <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Redux</span>
+            <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">API</span>
+            <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Material UI</span>
+          </div>
+          <div
+            class="project-overlay absolute inset-0 bg-black/80 flex flex-col justify-center items-center p-6"
+          >
+            <h3 class="text-white text-xl font-bold mb-2">Chercheur de recettes</h3>
+            <p class="text-gray-300 text-center mb-4">
+              Recherche rapide de plats à cuisiner, guidée par les ingrédients à disposition.
+            </p>
+            <div class="flex space-x-3">
+              <a
+                href="#"
+                class="px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors"
+              >Voir le projet</a>
+              <a
+                href="#"
+                class="px-4 py-2 border border-white text-white hover:bg-white/10 rounded-lg font-medium transition-colors"
+              >Code source</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet Design 1 -->
+      <div
+        class="project-card bg-white dark:bg-dark-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 relative"
+        data-category="design"
+      >
+        <div class="h-48 overflow-hidden">
+          <img
+
+          src="assets/img/couverture.png"
+
+      
+            alt="Flyer Design"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">Flyer promotionnel 2JM Counselling</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-4">
+            Création d’un flyer publicitaire professionnel pour la société 2JM Counselling Inter'activ.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Photoshop</span>
+            <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Design graphique</span>
+          </div>
+          <div
+            class="project-overlay absolute inset-0 bg-black/80 flex flex-col justify-center items-center p-6"
+          >
+            <h3 class="text-white text-xl font-bold mb-2">Flyer promotionnel 2JM Counselling</h3>
+            <p class="text-gray-300 text-center mb-4">
+              Flyer conçu avec un design soigné et adapté à la communication de l’entreprise.
+            </p>
+            <div class="flex space-x-3">
+              <a
+                href="#"
+                class="voir-design-btn px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors"
+                data-image="assets/img/couverture.png"
+                data-caption="Flyer promotionnel 2JM Counselling"
+              >Voir le design</a>
+              <a
+                href="assets/img/couverture.png"
+                class="px-4 py-2 border border-white text-white hover:bg-white/10 rounded-lg font-medium transition-colors"
+              >Télécharger</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Projet Design 2 -->
+      <div
+        class="project-card bg-white dark:bg-dark-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 relative"
+        data-category="design"
+      >
+        <div class="h-48 overflow-hidden">
+          <img
+            src="assets/img/SUICIDE.png"
+            alt="Flyer prévention du suicide - 2JM Counselling"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">Flyer – Prévention du suicide</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-4">
+            Conception d’un flyer éducatif pour <strong>2JM Counselling Inter'activ</strong>, 
+            visant à sensibiliser la population aux dangers du suicide et à encourager la recherche d’aide.
+            Design clair, visuel marquant et message percutant pour maximiser l’impact.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Photoshop</span>
+            <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Design graphique</span>
+          </div>
+          <div
+            class="project-overlay absolute inset-0 bg-black/80 flex flex-col justify-center items-center p-6"
+          >
+            <h3 class="text-white text-xl font-bold mb-2">Flyer – Prévention du suicide</h3>
+            <p class="text-gray-300 text-center mb-4">
+              Flyer conçu pour sensibiliser et informer sur la prévention du suicide,
+              adapté à la stratégie de communication de 2JM Counselling Inter'activ.
+            </p>
+            <div class="flex space-x-3">
+              <a
+                href="#"
+                class="voir-design-btn px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors"
+                data-image="assets/img/SUICIDE.png"
+                data-caption="Flyer – Prévention du suicide"
+              >Voir le design</a>
+              <a
+                href="assets/img/SUICIDE.png"
+                download
+                class="px-4 py-2 border border-white text-white hover:bg-white/10 rounded-lg font-medium transition-colors"
+              >Télécharger</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+              <!-- Projet Design 3 -->
+        <div
+          class="project-card bg-white dark:bg-dark-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 relative"
+          data-category="design"
+        >
+          <div class="h-48 overflow-hidden">
+            <img
+              src="assets/img/Affiche2.png"
+              alt="Flyer prévention troubles du sommeil - 2JM Counselling"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Flyer – Troubles du sommeil</h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4">
+              Création d’un flyer informatif pour <strong>2JM Counselling Inter'activ</strong>, 
+              visant à sensibiliser le public aux troubles du sommeil (insomnie, apnée, etc.)
+              et à proposer des ressources et solutions pour améliorer l’hygiène du sommeil.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Photoshop</span>
+              <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Design graphique</span>
+            </div>
+            <div
+              class="project-overlay absolute inset-0 bg-black/80 flex flex-col justify-center items-center p-6"
+            >
+              <h3 class="text-white text-xl font-bold mb-2">Flyer – Troubles du sommeil</h3>
+              <p class="text-gray-300 text-center mb-4">
+                Flyer conçu pour informer et guider vers des solutions pratiques : conseils d’hygiène du sommeil,
+                contacts d’aide et encouragement à consulter des professionnels.
+              </p>
+              <div class="flex space-x-3">
+                <a
+                  href="#"
+                  class="voir-design-btn px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors"
+                  data-image="assets/img/Affiche2.png"
+                  data-caption="Flyer – Troubles du sommeil"
+                >Voir le design</a>
+                <a
+                  href="assets/img/Affiche2.png"
+                  download
+                  class="px-4 py-2 border border-white text-white hover:bg-white/10 rounded-lg font-medium transition-colors"
+                >Télécharger</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+          <!-- Projet Design 4 -->
+          <div
+            class="project-card bg-white dark:bg-dark-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 relative"
+            data-category="design"
+          >
+            <div class="h-48 overflow-hidden">
+              <img
+                src="assets/img/Sans titre-3.png"
+                alt="Flyer promotion des services - 2JM Counselling"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Flyer – Promotion des services</h3>
+              <p class="text-gray-600 dark:text-gray-400 mb-4">
+                Création d’un flyer promotionnel pour <strong>2JM Counselling Inter'activ</strong>,  
+                présentant clairement leurs services phares afin d'attirer et informer les clients potentiels.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Photoshop</span>
+                <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Design graphique</span>
+              </div>
+              <div
+                class="project-overlay absolute inset-0 bg-black/80 flex flex-col justify-center items-center p-6"
+              >
+                <h3 class="text-white text-xl font-bold mb-2">Flyer – Promotion des services</h3>
+                <p class="text-gray-300 text-center mb-4">
+                  Flyer conçu pour valoriser les prestations de 2JM Counselling Inter'activ, mettant en avant leurs offres et leur professionnalisme.
+                </p>
+                <div class="flex space-x-3">
+                  <a
+                    href="#"
+                    class="voir-design-btn px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors"
+                    data-image="assets/img/Sans titre-3.png"
+                    data-caption="Flyer – Promotion des services"
+                  >Voir le design</a>
+                  <a
+                    href="assets/img/Sans titre-3.png"
+                    download
+                    class="px-4 py-2 border border-white text-white hover:bg-white/10 rounded-lg font-medium transition-colors"
+                  >Télécharger</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <!-- Projet Design 5 -->
+        <div
+          class="project-card bg-white dark:bg-dark-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 relative"
+          data-category="design"
+        >
+          <div class="h-48 overflow-hidden">
+            <img
+              src="assets/img/CAROLINE.png"
+              alt="Flyer promotion services coiffure féminine"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Flyer – Services Coiffure Féminine</h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4">
+              Création d’un flyer promotionnel pour une cliente spécialisée en coiffure féminine, incluant mèches, gestion du stress et autres soins capillaires.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Photoshop</span>
+              <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Design graphique</span>
+            </div>
+            <div
+              class="project-overlay absolute inset-0 bg-black/80 flex flex-col justify-center items-center p-6"
+            >
+              <h3 class="text-white text-xl font-bold mb-2">Flyer – Services Coiffure Féminine</h3>
+              <p class="text-gray-300 text-center mb-4">
+                Flyer conçu pour promouvoir efficacement les services de coiffure féminine, mèches et gestion du stress capillaire.
+              </p>
+              <div class="flex space-x-3">
+                <a
+                  href="#"
+                  class="voir-design-btn px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors"
+                  data-image="assets/img/CAROLINE.png"
+                  data-caption="Flyer – Services Coiffure Féminine"
+                >Voir le design</a>
+                <a
+                  href="assets/img/CAROLINE.png"
+                  download
+                  class="px-4 py-2 border border-white text-white hover:bg-white/10 rounded-lg font-medium transition-colors"
+                >Télécharger</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Projet Design 6 -->
+        <div
+          class="project-card bg-white dark:bg-dark-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 relative"
+          data-category="design"
+        >
+          <div class="h-48 overflow-hidden">
+            <img
+              src="assets/img/AICHA4.png"
+              alt="Flyer promotion services couture"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Flyer – Services Couture</h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4">
+              Création d’un flyer promotionnel pour une cliente spécialisée en couture, mettant en avant ses services de confection et retouches sur mesure.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Photoshop</span>
+              <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Design graphique</span>
+            </div>
+            <div
+              class="project-overlay absolute inset-0 bg-black/80 flex flex-col justify-center items-center p-6"
+            >
+              <h3 class="text-white text-xl font-bold mb-2">Flyer – Services Couture</h3>
+              <p class="text-gray-300 text-center mb-4">
+                Flyer conçu pour promouvoir les services de couture, confection et retouches, avec un design élégant et professionnel.
+              </p>
+              <div class="flex space-x-3">
+                <a
+                  href="#"
+                  class="voir-design-btn px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors"
+                  data-image="assets/img/AICHA4.png"
+                  data-caption="Flyer – Services Couture"
+                >Voir le design</a>
+                <a
+                  href="assets/img/AICHA4.png"
+                  download
+                  class="px-4 py-2 border border-white text-white hover:bg-white/10 rounded-lg font-medium transition-colors"
+                >Télécharger</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+                <!-- Projet Design 7-->
+        <div
+          class="project-card bg-white dark:bg-dark-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 relative"
+          data-category="design"
+        >
+          <div class="h-48 overflow-hidden">
+            <img
+              src="assets/img/cours_affiche.png"
+              alt="Flyer promotionnel centre de soutien scolaire"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Flyer – Centre de soutien scolaire</h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4">
+              Création d’un flyer promotionnel dans le cadre d’un projet personnel/entrepreneurial pour un centre de répétition spécialisé dans l’enseignement général et technique.  
+              Ce flyer met en avant les services pédagogiques offerts, avec un design professionnel et attractif pour toucher les élèves et leurs parents.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Photoshop</span>
+              <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Design graphique</span>
+            </div>
+            <div
+              class="project-overlay absolute inset-0 bg-black/80 flex flex-col justify-center items-center p-6"
+            >
+              <h3 class="text-white text-xl font-bold mb-2">Flyer – Centre de soutien scolaire</h3>
+              <p class="text-gray-300 text-center mb-4">
+                Flyer conçu pour présenter les offres de soutien scolaire en enseignement général et technique, destiné à informer et attirer élèves et parents.
+              </p>
+              <div class="flex space-x-3">
+                <a
+                  href="#"
+                  class="voir-design-btn px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors"
+                  data-image="assets/img/cours_affiche.png"
+                  data-caption="Flyer – Centre de soutien scolaire"
+                >Voir le design</a>
+                <a
+                  href="assets/img/cours_affiche.png"
+                  download
+                  class="px-4 py-2 border border-white text-white hover:bg-white/10 rounded-lg font-medium transition-colors"
+                >Télécharger</a>
+              </div>
+            </div>
+          </div>
+        </div>
+                
+                <!-- Projet Design 8 -->
+        <div
+          class="project-card bg-white dark:bg-dark-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 relative"
+          data-category="design"
+        >
+          <div class="h-48 overflow-hidden">
+            <img
+              src="assets/img/Sans titre-1 SEPTEMBRE.png"
+              alt="Flyer rentrée scolaire - Centre de soutien scolaire"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Flyer – Rentrée scolaire</h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4">
+              Création d’un flyer pour un centre de soutien scolaire proposant des cours à domicile et en centre, 
+              visant à attirer l’attention des parents sur le début de la rentrée scolaire 
+              et les encourager à inscrire rapidement leurs enfants pour assurer leur réussite.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Photoshop</span>
+              <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Design graphique</span>
+            </div>
+            <div
+              class="project-overlay absolute inset-0 bg-black/80 flex flex-col justify-center items-center p-6"
+            >
+              <h3 class="text-white text-xl font-bold mb-2">Flyer – Rentrée scolaire</h3>
+              <p class="text-gray-300 text-center mb-4">
+                Flyer conçu pour sensibiliser les parents à l’importance d’une inscription rapide dans un centre de soutien scolaire ou pour des cours à domicile.
+              </p>
+              <div class="flex space-x-3">
+                <a
+                  href="#"
+                  class="voir-design-btn px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors"
+                  data-image="assets/img/Sans titre-1 SEPTEMBRE.png"
+                  data-caption="Flyer – Rentrée scolaire"
+                >Voir le design</a>
+                <a
+                  href="assets/img/Sans titre-1 SEPTEMBRE.png"
+                  download
+                  class="px-4 py-2 border border-white text-white hover:bg-white/10 rounded-lg font-medium transition-colors"
+                >Télécharger</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+                <!-- Projet Design 9 -->
+        <div
+          class="project-card bg-white dark:bg-dark-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 relative"
+          data-category="design"
+        >
+          <div class="h-48 overflow-hidden">
+            <img
+              src="assets/img/Sans titre-2.png"
+              alt="Flyer concert chorale - Église catholique"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Flyer – Concert de chorale</h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4">
+              Création d’un flyer annonçant un concert de chorale organisé dans une église catholique, 
+              invitant la communauté à partager un moment spirituel et musical.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Photoshop</span>
+              <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Illustrator</span>
+              <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Design graphique</span>
+            </div>
+            <div
+              class="project-overlay absolute inset-0 bg-black/80 flex flex-col justify-center items-center p-6"
+            >
+              <h3 class="text-white text-xl font-bold mb-2">Flyer – Concert de chorale</h3>
+              <p class="text-gray-300 text-center mb-4">
+                Flyer conçu pour promouvoir l’événement et encourager la participation des fidèles et de la communauté.
+              </p>
+              <div class="flex space-x-3">
+                <a
+                  href="#"
+                  class="voir-design-btn px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors"
+                  data-image="assets/img/Sans titre-2.png"
+                  data-caption="Flyer – Concert de chorale"
+                >Voir le design</a>
+                <a
+                  href="assets/img/Sans titre-2.png"
+                  download
+                  class="px-4 py-2 border border-white text-white hover:bg-white/10 rounded-lg font-medium transition-colors"
+                >Télécharger</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+                  <!-- Projet Design 10 -->
+          <div
+            class="project-card bg-white dark:bg-dark-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 relative"
+            data-category="design"
+          >
+            <div class="h-48 overflow-hidden">
+              <img
+                src="assets/img/Noel des petits enfant13.png"
+                alt="Flyer événement Noël des tout-petits"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Flyer – Noël des tout-petits</h3>
+              <p class="text-gray-600 dark:text-gray-400 mb-4">
+                Création d’un flyer festif pour annoncer l’événement de Noël destiné aux tout-petits, avec activités ludiques, spectacles, et animations spécialement conçues pour les enfants en bas âge.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Photoshop</span>
+                <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Illustrator</span>
+                <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Design graphique</span>
+              </div>
+              <div
+                class="project-overlay absolute inset-0 bg-black/80 flex flex-col justify-center items-center p-6"
+              >
+                <h3 class="text-white text-xl font-bold mb-2">Flyer – Noël des tout-petits</h3>
+                <p class="text-gray-300 text-center mb-4">
+                  Flyer coloré et joyeux conçu pour attirer l’attention des parents et familles, mettant en avant la magie de Noël pour les plus jeunes.
+                </p>
+                <div class="flex space-x-3">
+                  <a
+                    href="#"
+                    class="voir-design-btn px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors"
+                    data-image="assets/img/Noel des petits enfant13.png"
+                    data-caption="Flyer – Noël des tout-petits"
+                  >Voir le design</a>
+                  <a
+                    href="assets/img/Noel des petits enfant13.png"
+                    download
+                    class="px-4 py-2 border border-white text-white hover:bg-white/10 rounded-lg font-medium transition-colors"
+                  >Télécharger</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+                    <!-- Projet Design 11 -->
+          <div
+            class="project-card bg-white dark:bg-dark-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 relative"
+            data-category="design"
+          >
+            <div class="h-48 overflow-hidden">
+              <img
+                src="assets/img/REPRISE 2.png"
+                alt="Flyer annonce début des cours - Centre de répétition"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Flyer – Début des cours</h3>
+              <p class="text-gray-600 dark:text-gray-400 mb-4">
+                Création d’un flyer pour un centre de répétition spécialisé en enseignement général et technique,
+                annonçant le début des cours et invitant les élèves et parents à s’inscrire pour la nouvelle année scolaire.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Photoshop</span>
+                <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Design graphique</span>
+              </div>
+              <div
+                class="project-overlay absolute inset-0 bg-black/80 flex flex-col justify-center items-center p-6"
+              >
+                <h3 class="text-white text-xl font-bold mb-2">Flyer – Début des cours</h3>
+                <p class="text-gray-300 text-center mb-4">
+                  Flyer conçu pour informer les parents et élèves de la reprise des cours, mettant en avant les avantages du centre et les modalités d’inscription.
+                </p>
+                <div class="flex space-x-3">
+                  <a
+                    href="#"
+                    class="voir-design-btn px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors"
+                    data-image="assets/img/REPRISE 2.png"
+                    data-caption="Flyer – Début des cours"
+                  >Voir le design</a>
+                  <a
+                    href="assets/img/REPRISE 2.png"
+                    download
+                    class="px-4 py-2 border border-white text-white hover:bg-white/10 rounded-lg font-medium transition-colors"
+                  >Télécharger</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+    <!-- Bouton voir plus -->
+    <div class="text-center mt-12">
+      <a
+        href="#"
+        class="inline-flex items-center px-6 py-3 border border-primary-600 text-primary-600 hover:bg-primary-50 dark:hover:bg-dark-800 rounded-lg font-medium transition-colors"
+      >
+        Voir tous les projets
+        <i class="fas fa-arrow-right ml-2"></i>
+      </a>
+    </div>
+
+  </div>
+
+    <!-- Modal Visuel Design -->
+  <div
+    id="designModal"
+    class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 hidden"
+  >
+    <div class="bg-white dark:bg-dark-900 rounded-lg max-w-3xl w-full p-6 relative">
+      <button
+        id="modalCloseBtn"
+        class="absolute top-3 right-3 text-gray-700 dark:text-gray-300 hover:text-red-600 text-2xl font-bold"
+        aria-label="Fermer modal"
+      >
+        &times;
+      </button>
+      <h3 id="modalCaption" class="text-xl font-bold mb-4 text-center text-gray-900 dark:text-gray-100"></h3>
+      <img id="modalImage" src="" alt="" class="w-full rounded-md max-h-[70vh] object-contain mx-auto" />
+    </div>
+  </div>
+
+</section>
+
+<script>
+  // Filtrage des projets
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const projects = document.querySelectorAll('.project-card');
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.getAttribute('data-filter');
+
+      // Mise à jour des styles des boutons (actif/inactif)
+      filterButtons.forEach(b => {
+        b.classList.remove('bg-primary-600', 'text-white');
+        b.classList.add('bg-gray-200', 'dark:bg-dark-700', 'text-gray-800', 'dark:text-gray-200');
+      });
+
+      // Bouton cliqué en actif
+      btn.classList.add('bg-primary-600', 'text-white');
+      btn.classList.remove('bg-gray-200', 'dark:bg-dark-700', 'text-gray-800', 'dark:text-gray-200');
+
+      // Afficher / masquer les projets selon le filtre
+      projects.forEach(project => {
+        const category = project.getAttribute('data-category');
+        if (filter === 'all' || category === filter) {
+          project.style.display = 'block';
+        } else {
+          project.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // Activer filtre "Tous" au chargement
+  document.querySelector('.filter-btn[data-filter="all"]').click();
+
+  // Modal pour voir le design
+  const modal = document.getElementById('designModal');
+  const modalImage = document.getElementById('modalImage');
+  const modalCaption = document.getElementById('modalCaption');
+  const modalCloseBtn = document.getElementById('modalCloseBtn');
+
+  // Sélection de tous les boutons "Voir le design"
+  const voirDesignBtns = document.querySelectorAll('.voir-design-btn');
+
+  voirDesignBtns.forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      const imgSrc = btn.getAttribute('data-image');
+      const caption = btn.getAttribute('data-caption');
+
+      modalImage.src = imgSrc;
+      modalImage.alt = caption;
+      modalCaption.textContent = caption;
+
+      modal.classList.remove('hidden');
+    });
+  });
+
+  // Fermeture du modal
+  modalCloseBtn.addEventListener('click', () => {
+    modal.classList.add('hidden');
+    modalImage.src = '';
+    modalCaption.textContent = '';
+  });
+
+  // Fermeture du modal si clic en dehors de la boîte
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.classList.add('hidden');
+      modalImage.src = '';
+      modalCaption.textContent = '';
+    }
+  });
+
+  // Optionnel: fermeture avec la touche Échap
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+      modal.classList.add('hidden');
+      modalImage.src = '';
+      modalCaption.textContent = '';
+    }
+  });
+</script>
+</body>
+</html>
