@@ -456,7 +456,7 @@
     </h2>
 
     <!-- Boutons de filtre -->
-    <div class="flex justify-center mb-12 space-x-4">
+    <div class="flex flex-wrap justify-center mb-12 gap-4">
       <button
         class="filter-btn px-4 py-2 bg-primary-600 text-white rounded-lg font-medium transition-colors hover:bg-primary-700"
         data-filter="all"
@@ -478,211 +478,192 @@
     </div>
 
     <!-- Grille des projets -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-<!-- Projet Dev 1 -->
-<!-- Projet Gestion des Stagiaires -->
-<div
-  class="project-card bg-white dark:bg-dark-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 relative"
-  data-category="dev"
->
-  <!-- Image principale -->
-  <div class="h-48 overflow-hidden">
-    <img
-      src="assets/img/application_desktop.PNG"
-      alt="Application gestion des stagiaires"
-      class="w-full h-full object-cover"
-    />
-  </div>
+      <!-- Projet Dev 1 -->
+      <div
+        class="project-card bg-white dark:bg-dark-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 relative"
+        data-category="dev"
+      >
+        <!-- Image principale -->
+        <div class="h-48 sm:h-56 md:h-48 overflow-hidden">
+          <img
+            src="assets/img/application_desktop.PNG"
+            alt="Application gestion des stagiaires"
+            class="w-full h-full object-cover"
+          />
+        </div>
 
-  <!-- Contenu -->
-  <div class="p-6">
-    <h3 class="text-xl font-bold mb-2">Application desktop de gestion des stagiaires</h3>
-    <p class="text-gray-600 dark:text-gray-400 mb-4">
-      Une application pour la gestion des stagiaires au sein de HGOPED, permettant le suivi des informations et la gestion des données de stage.
-    </p>
+        <!-- Contenu -->
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">Application desktop de gestion des stagiaires</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-4">
+            Une application pour la gestion des stagiaires au sein de HGOPED, permettant le suivi des informations et la gestion des données de stage.
+          </p>
 
-    <!-- Technologies utilisées -->
-    <div class="flex flex-wrap gap-2 mb-4">
-      <span class="flex items-center gap-1 px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">
-        <i class="fab fa-java text-red-600"></i> Java Swing
-      </span>
-      <span class="flex items-center gap-1 px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">
-        <i class="fas fa-database text-blue-600"></i> MySQL
-      </span>
-    </div>
+          <!-- Technologies utilisées -->
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="flex items-center gap-1 px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">
+              <i class="fab fa-java text-red-600"></i> Java Swing
+            </span>
+            <span class="flex items-center gap-1 px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">
+              <i class="fas fa-database text-blue-600"></i> MySQL
+            </span>
+          </div>
 
-    <!-- Overlay au survol -->
-    <div
-      class="project-overlay absolute inset-0 bg-black/80 flex flex-col justify-center items-center p-6 opacity-0 hover:opacity-100 transition-opacity duration-300"
-    >
-      <h3 class="text-white text-xl font-bold mb-2">Gestion des stagiaires</h3>
-      <p class="text-yellow-400 text-center mb-4 font-semibold">
-        Interface intuitive avec gestion complète des stagiaires, ajout, modification, suppression et suivi des stages.
-      </p>
-      <div class="flex space-x-3">
-        <a
-          href="projet-gestion-stagiaires.html"
-          class="px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors"
-        >Voir le projet</a>
-        <a
-          href="https://github.com/Edongo999/Gestion-Stagiaires" target="_blank"
-          class="px-4 py-2 border border-white text-white hover:bg-white/10 rounded-lg font-medium transition-colors"
-        >Code source</a>
+          <!-- Overlay au survol -->
+          <div
+            class="project-overlay absolute inset-0 bg-black/80 flex flex-col justify-center items-center p-6 opacity-0 hover:opacity-100 transition-opacity duration-300"
+          >
+            <h3 class="text-white text-xl font-bold mb-2">Gestion des stagiaires</h3>
+            <p class="text-yellow-400 text-center mb-4 font-semibold">
+              Interface intuitive avec gestion complète des stagiaires, ajout, modification, suppression et suivi des stages.
+            </p>
+            <div class="flex flex-wrap justify-center gap-3">
+              <a
+                href="projet-gestion-stagiaires.html"
+                class="px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors"
+              >Voir le projet</a>
+              <a
+                href="https://github.com/Edongo999/Gestion-Stagiaires" target="_blank"
+                class="px-4 py-2 border border-white text-white hover:bg-white/10 rounded-lg font-medium transition-colors"
+              >Code source</a>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
 
-<!-- Projet Dev 2 -->
-<!-- Projet Plateforme FECACFOP -->
-<div
-  class="project-card bg-white dark:bg-dark-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 relative"
-  data-category="dev"
->
-  <!-- Image principale -->
-  <div class="h-48 overflow-hidden">
-    <img
-      src="assets/img/FECACFOP/CaptureACCUEIL.PNG"
-      alt="Plateforme web FECACFOP"
-      class="w-full h-full object-cover"
-    />
-  </div>
+      <!-- Projet Dev 2 -->
+      <div
+        class="project-card bg-white dark:bg-dark-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 relative"
+        data-category="dev"
+      >
+        <div class="h-48 sm:h-56 md:h-48 overflow-hidden">
+          <img
+            src="assets/img/FECACFOP/CaptureACCUEIL.PNG"
+            alt="Plateforme web FECACFOP"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">Plateforme web pour la FECACFOP</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-4">
+            Une plateforme complète pour la FECACFOP avec gestion des formations, offres d'emploi, inscriptions et suivi des apprenants.
+          </p>
 
-  <!-- Contenu -->
-  <div class="p-6">
-    <h3 class="text-xl font-bold mb-2">Plateforme web pour la FECACFOP</h3>
-    <p class="text-gray-600 dark:text-gray-400 mb-4">
-      Une plateforme complète pour la FECACFOP avec gestion des formations, offres d'emploi, inscriptions et suivi des apprenants.
-    </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="flex items-center gap-1 px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">
+              <i class="fab fa-html5 text-orange-600"></i> HTML5
+            </span>
+            <span class="flex items-center gap-1 px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">
+              <i class="fab fa-css3-alt text-blue-600"></i> CSS
+            </span>
+            <span class="flex items-center gap-1 px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">
+              <i class="fab fa-js text-yellow-500"></i> JavaScript
+            </span>
+            <span class="flex items-center gap-1 px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">
+              <i class="fab fa-php text-purple-700"></i> PHP
+            </span>
+            <span class="flex items-center gap-1 px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">
+              <i class="fas fa-database text-blue-600"></i> MySQL
+            </span>
+          </div>
 
-    <!-- Technologies utilisées -->
-    <div class="flex flex-wrap gap-2 mb-4">
-      <span class="flex items-center gap-1 px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">
-        <i class="fab fa-html5 text-orange-600"></i> HTML5
-      </span>
-      <span class="flex items-center gap-1 px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">
-        <i class="fab fa-css3-alt text-blue-600"></i> CSS
-      </span>
-      <span class="flex items-center gap-1 px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">
-        <i class="fab fa-js text-yellow-500"></i> JavaScript
-      </span>
-      <span class="flex items-center gap-1 px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">
-        <i class="fab fa-php text-purple-700"></i> PHP
-      </span>
-      <span class="flex items-center gap-1 px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">
-        <i class="fas fa-database text-blue-600"></i> MySQL
-      </span>
-    </div>
-
-    <!-- Overlay au survol -->
-    <div
-      class="project-overlay absolute inset-0 bg-black/80 flex flex-col justify-center items-center p-6 opacity-0 hover:opacity-100 transition-opacity duration-300"
-    >
-      <h3 class="text-white text-xl font-bold mb-2">FECACFOP</h3>
-      <p class="text-yellow-400 text-center mb-4 font-semibold">
-        Gestion des formations, offres d'emploi et inscriptions avec interface fluide, moderne et responsive.
-      </p>
-      <div class="flex space-x-3">
-        <a
-          href="projet-plateforme-web-FECACFOP.html"
-          class="px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors"
-        >Voir le projet</a>
-        <a
-          href="https://github.com/Edongo999/Plateforme_web_du_FECACFOP" target="_blank"
-          class="px-4 py-2 border border-white text-white hover:bg-white/10 rounded-lg font-medium transition-colors"
-        >Code source</a>
+          <div
+            class="project-overlay absolute inset-0 bg-black/80 flex flex-col justify-center items-center p-6 opacity-0 hover:opacity-100 transition-opacity duration-300"
+          >
+            <h3 class="text-white text-xl font-bold mb-2">FECACFOP</h3>
+            <p class="text-yellow-400 text-center mb-4 font-semibold">
+              Gestion des formations, offres d'emploi et inscriptions avec interface fluide, moderne et responsive.
+            </p>
+            <div class="flex flex-wrap justify-center gap-3">
+              <a
+                href="projet-plateforme-web-FECACFOP.html"
+                class="px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors"
+              >Voir le projet</a>
+              <a
+                href="https://github.com/Edongo999/Plateforme_web_du_FECACFOP" target="_blank"
+                class="px-4 py-2 border border-white text-white hover:bg-white/10 rounded-lg font-medium transition-colors"
+              >Code source</a>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
 
-<!-- Projet Dev 3 -->
-<!-- Projet Gestion de Stock -->
-<div
-  class="project-card bg-white dark:bg-dark-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 relative"
-  data-category="dev"
->
-  <!-- Image principale -->
-  <div class="h-48 overflow-hidden">
-    <img
-      src="assets/img/gestion_de_stock1.PNG"
-      alt="Application de gestion de stock"
-      class="w-full h-full object-cover"
-    />
-  </div>
+      <!-- Projet Dev 3 -->
+      <div
+        class="project-card bg-white dark:bg-dark-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 relative"
+        data-category="dev"
+      >
+        <div class="h-48 sm:h-56 md:h-48 overflow-hidden">
+          <img
+            src="assets/img/gestion_de_stock1.PNG"
+            alt="Application de gestion de stock"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">Application de gestion de stock</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-4">
+            Mini-application web pour gérer les stocks : ajout, modification, suppression et suivi des produits.
+          </p>
 
-  <!-- Contenu -->
-  <div class="p-6">
-    <h3 class="text-xl font-bold mb-2">Application de gestion de stock</h3>
-    <p class="text-gray-600 dark:text-gray-400 mb-4">
-      Mini-application web pour gérer les stocks : ajout, modification, suppression et suivi des produits.
-    </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="flex items-center gap-1 px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">
+              <i class="fab fa-html5 text-orange-600"></i> HTML5
+            </span>
+            <span class="flex items-center gap-1 px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">
+              <i class="fab fa-css3-alt text-blue-600"></i> CSS
+            </span>
+            <span class="flex items-center gap-1 px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">
+              <i class="fab fa-js text-yellow-500"></i> JavaScript
+            </span>
+            <span class="flex items-center gap-1 px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">
+              <i class="fab fa-php text-purple-700"></i> PHP
+            </span>
+            <span class="flex items-center gap-1 px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">
+              <i class="fas fa-database text-blue-600"></i> MySQL
+            </span>
+          </div>
 
-    <!-- Technologies utilisées -->
-    <div class="flex flex-wrap gap-2 mb-4">
-      <span class="flex items-center gap-1 px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">
-        <i class="fab fa-html5 text-orange-600"></i> HTML5
-      </span>
-      <span class="flex items-center gap-1 px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">
-        <i class="fab fa-css3-alt text-blue-600"></i> CSS
-      </span>
-      <span class="flex items-center gap-1 px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">
-        <i class="fab fa-js text-yellow-500"></i> JavaScript
-      </span>
-      <span class="flex items-center gap-1 px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">
-        <i class="fab fa-php text-purple-700"></i> PHP
-      </span>
-      <span class="flex items-center gap-1 px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">
-        <i class="fas fa-database text-blue-600"></i> MySQL
-      </span>
-    </div>
-
-    <!-- Overlay au survol -->
-    <div
-      class="project-overlay absolute inset-0 bg-black/80 flex flex-col justify-center items-center p-6 opacity-0 hover:opacity-100 transition-opacity duration-300"
-    >
-      <h3 class="text-white text-xl font-bold mb-2">Gestion de Stock</h3>
-      <p class="text-yellow-400 text-center mb-4 font-semibold">
-        Suivi des stocks, alertes sur les produits faibles et gestion fluide des entrées/sorties.
-      </p>
-      <div class="flex space-x-3">
-        <a
-          href="projet-gestion-stocks.html"
-          class="px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors"
-        >Voir le projet</a>
-        <a
-          href="https://github.com/Edongo999/Application-_de_gestion_de_stock.git" target="_blank"
-          class="px-4 py-2 border border-white text-white hover:bg-white/10 rounded-lg font-medium transition-colors"
-        >Code source</a>
+          <div
+            class="project-overlay absolute inset-0 bg-black/80 flex flex-col justify-center items-center p-6 opacity-0 hover:opacity-100 transition-opacity duration-300"
+          >
+            <h3 class="text-white text-xl font-bold mb-2">Gestion de Stock</h3>
+            <p class="text-yellow-400 text-center mb-4 font-semibold">
+              Suivi des stocks, alertes sur les produits faibles et gestion fluide des entrées/sorties.
+            </p>
+            <div class="flex flex-wrap justify-center gap-3">
+              <a
+                href="projet-gestion-stocks.html"
+                class="px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors"
+              >Voir le projet</a>
+              <a
+                href="https://github.com/Edongo999/Application-_de_gestion_de_stock.git" target="_blank"
+                class="px-4 py-2 border border-white text-white hover:bg-white/10 rounded-lg font-medium transition-colors"
+              >Code source</a>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
 
 <!-- Projet Dev 4 -->
-<!-- Projet Gestion des Incidents -->
 <div
   class="project-card bg-white dark:bg-dark-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 relative"
   data-category="dev"
 >
-  <!-- Image principale -->
-  <div class="h-48 overflow-hidden">
+  <div class="h-48 sm:h-56 md:h-48 overflow-hidden">
     <img
       src="assets/img/INCIDENTS/incident0.PNG"
       alt="Application de gestion des incidents"
       class="w-full h-full object-cover"
     />
   </div>
-
-  <!-- Contenu -->
   <div class="p-6">
     <h3 class="text-xl font-bold mb-2">Application de gestion des incidents</h3>
     <p class="text-gray-600 dark:text-gray-400 mb-4">
       Application desktop pour signaler, suivre et analyser les incidents avec alertes et rapports détaillés.
     </p>
-
-    <!-- Technologies utilisées -->
     <div class="flex flex-wrap gap-2 mb-4">
       <span class="flex items-center gap-1 px-3 py-1 bg-gray-200 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">
         <i class="fab fa-python text-blue-500"></i> Python
@@ -694,8 +675,6 @@
         <i class="fas fa-desktop text-green-600"></i> Tkinter / PyQt
       </span>
     </div>
-
-    <!-- Overlay au survol -->
     <div
       class="project-overlay absolute inset-0 bg-black/80 flex flex-col justify-center items-center p-6 opacity-0 hover:opacity-100 transition-opacity duration-300"
     >
@@ -703,7 +682,7 @@
       <p class="text-yellow-400 text-center mb-4 font-semibold">
         Interface complète pour le suivi et l’analyse des incidents avec tableau de bord clair et rapports générés.
       </p>
-      <div class="flex space-x-3">
+      <div class="flex flex-wrap justify-center gap-3">
         <a
           href="projet-gestion-incidents.html"
           class="px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors"
@@ -717,14 +696,12 @@
   </div>
 </div>
 
-
-
 <!-- Projet Design 1 -->
 <div
   class="project-card group bg-white dark:bg-dark-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 relative"
   data-category="design"
 >
-  <div class="h-48 overflow-hidden">
+  <div class="h-48 sm:h-56 md:h-48 overflow-hidden">
     <img
       src="assets/img/couverture.png"
       alt="Flyer Design"
@@ -747,7 +724,7 @@
       <p class="text-yellow-400 text-center mb-4 font-semibold">
         Flyer conçu avec un design soigné et impactant pour la communication de l’entreprise.
       </p>
-      <div class="flex space-x-3">
+      <div class="flex flex-wrap justify-center gap-3">
         <a
           href="#"
           class="voir-design-btn px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors"
@@ -769,7 +746,7 @@
   class="project-card group bg-white dark:bg-dark-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 relative"
   data-category="design"
 >
-  <div class="h-48 overflow-hidden">
+  <div class="h-48 sm:h-56 md:h-48 overflow-hidden">
     <img
       src="assets/img/SUICIDE.png"
       alt="Flyer prévention du suicide - 2JM Counselling"
@@ -792,7 +769,7 @@
       <p class="text-yellow-400 text-center mb-4 font-semibold">
         Flyer conçu pour informer et sensibiliser, adapté à la stratégie de communication de 2JM Counselling.
       </p>
-      <div class="flex space-x-3">
+      <div class="flex flex-wrap justify-center gap-3">
         <a
           href="#"
           class="voir-design-btn px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors"
@@ -814,7 +791,7 @@
   class="project-card group bg-white dark:bg-dark-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 relative"
   data-category="design"
 >
-  <div class="h-48 overflow-hidden">
+  <div class="h-48 sm:h-56 md:h-48 overflow-hidden">
     <img
       src="assets/img/Affiche2.png"
       alt="Flyer prévention troubles du sommeil - 2JM Counselling"
@@ -837,7 +814,7 @@
       <p class="text-yellow-400 text-center mb-4 font-semibold">
         Flyer informatif avec conseils pratiques, contacts d’aide et encouragement à consulter des professionnels.
       </p>
-      <div class="flex space-x-3">
+      <div class="flex flex-wrap justify-center gap-3">
         <a
           href="#"
           class="voir-design-btn px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors"
@@ -859,7 +836,7 @@
   class="project-card group bg-white dark:bg-dark-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 relative"
   data-category="design"
 >
-  <div class="h-48 overflow-hidden">
+  <div class="h-48 sm:h-56 md:h-48 overflow-hidden">
     <img
       src="assets/img/Sans titre-3.png"
       alt="Flyer Bonne Weekend – Protéine"
@@ -882,7 +859,7 @@
       <p class="text-yellow-400 text-center mb-4 font-semibold">
         Flyer visuel et professionnel pour renforcer la communication de Protai-in.
       </p>
-      <div class="flex space-x-3">
+      <div class="flex flex-wrap justify-center gap-3">
         <a
           href="#"
           class="voir-design-btn px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors"
@@ -900,16 +877,9 @@
 </div>
 
 <!-- Projet Design 5 -->
-<div
-  class="project-card group bg-white dark:bg-dark-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 relative"
-  data-category="design"
->
+<div class="project-card group bg-white dark:bg-dark-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 relative" data-category="design">
   <div class="h-48 overflow-hidden">
-    <img
-      src="assets/img/CAROLINE.png"
-      alt="Flyer promotion services coiffure féminine"
-      class="w-full h-full object-cover"
-    />
+    <img src="assets/img/CAROLINE.png" alt="Flyer promotion services coiffure féminine" class="w-full h-full object-cover"/>
   </div>
   <div class="p-6">
     <h3 class="text-xl font-bold mb-2">Flyer – Services Coiffure Féminine</h3>
@@ -920,41 +890,23 @@
       <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Photoshop</span>
       <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Design graphique</span>
     </div>
-    <div
-      class="project-overlay opacity-0 group-hover:opacity-100 absolute inset-0 bg-black/80 flex flex-col justify-center items-center p-6 transition-opacity duration-300"
-    >
-      <h3 class="text-white text-xl font-bold mb-2">Flyer – Services Coiffure Féminine</h3>
-      <p class="text-yellow-400 text-center mb-4 font-semibold">
+    <div class="project-overlay opacity-0 group-hover:opacity-100 absolute inset-0 bg-black/80 flex flex-col justify-center items-center p-4 sm:p-6 transition-opacity duration-300 rounded-xl">
+      <h3 class="text-white text-lg sm:text-xl font-bold mb-2 text-center">Flyer – Services Coiffure Féminine</h3>
+      <p class="text-yellow-400 text-center mb-4 font-semibold text-sm sm:text-base">
         Flyer visuel et attractif pour valoriser les services de coiffure féminine et soins capillaires.
       </p>
-      <div class="flex space-x-3">
-        <a
-          href="#"
-          class="voir-design-btn px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors"
-          data-image="assets/img/CAROLINE.png"
-          data-caption="Flyer – Services Coiffure Féminine"
-        >Voir le design</a>
-        <a
-          href="assets/img/CAROLINE.png"
-          download
-          class="px-4 py-2 border border-white text-white hover:bg-white/10 rounded-lg font-medium transition-colors"
-        >Télécharger</a>
+      <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-3">
+        <a href="#" class="voir-design-btn px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors text-sm sm:text-base" data-image="assets/img/CAROLINE.png" data-caption="Flyer – Services Coiffure Féminine">Voir le design</a>
+        <a href="assets/img/CAROLINE.png" download class="px-4 py-2 border border-white text-white hover:bg-white/10 rounded-lg font-medium transition-colors text-sm sm:text-base">Télécharger</a>
       </div>
     </div>
   </div>
 </div>
 
 <!-- Projet Design 6 -->
-<div
-  class="project-card group bg-white dark:bg-dark-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 relative"
-  data-category="design"
->
+<div class="project-card group bg-white dark:bg-dark-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 relative" data-category="design">
   <div class="h-48 overflow-hidden">
-    <img
-      src="assets/img/AICHA4.png"
-      alt="Flyer promotion services couture"
-      class="w-full h-full object-cover"
-    />
+    <img src="assets/img/AICHA4.png" alt="Flyer promotion services couture" class="w-full h-full object-cover"/>
   </div>
   <div class="p-6">
     <h3 class="text-xl font-bold mb-2">Flyer – Services Couture</h3>
@@ -965,41 +917,23 @@
       <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Photoshop</span>
       <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Design graphique</span>
     </div>
-    <div
-      class="project-overlay opacity-0 group-hover:opacity-100 absolute inset-0 bg-black/80 flex flex-col justify-center items-center p-6 transition-opacity duration-300"
-    >
-      <h3 class="text-white text-xl font-bold mb-2">Flyer – Services Couture</h3>
-      <p class="text-yellow-400 text-center mb-4 font-semibold">
+    <div class="project-overlay opacity-0 group-hover:opacity-100 absolute inset-0 bg-black/80 flex flex-col justify-center items-center p-4 sm:p-6 transition-opacity duration-300 rounded-xl">
+      <h3 class="text-white text-lg sm:text-xl font-bold mb-2 text-center">Flyer – Services Couture</h3>
+      <p class="text-yellow-400 text-center mb-4 font-semibold text-sm sm:text-base">
         Flyer élégant et professionnel pour valoriser les services de couture, confection et retouches.
       </p>
-      <div class="flex space-x-3">
-        <a
-          href="#"
-          class="voir-design-btn px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors"
-          data-image="assets/img/AICHA4.png"
-          data-caption="Services Couture – Confection et Retouches"
-        >Voir le design</a>
-        <a
-          href="assets/img/AICHA4.png"
-          download
-          class="px-4 py-2 border border-white text-white hover:bg-white/10 rounded-lg font-medium transition-colors"
-        >Télécharger</a>
+      <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-3">
+        <a href="#" class="voir-design-btn px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors text-sm sm:text-base" data-image="assets/img/AICHA4.png" data-caption="Services Couture – Confection et Retouches">Voir le design</a>
+        <a href="assets/img/AICHA4.png" download class="px-4 py-2 border border-white text-white hover:bg-white/10 rounded-lg font-medium transition-colors text-sm sm:text-base">Télécharger</a>
       </div>
     </div>
   </div>
 </div>
 
 <!-- Projet Design 7 -->
-<div
-  class="project-card group bg-white dark:bg-dark-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 relative"
-  data-category="design"
->
+<div class="project-card group bg-white dark:bg-dark-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 relative" data-category="design">
   <div class="h-48 overflow-hidden">
-    <img
-      src="assets/img/cours_affiche.png"
-      alt="Flyer centre de soutien scolaire"
-      class="w-full h-full object-cover"
-    />
+    <img src="assets/img/cours_affiche.png" alt="Flyer centre de soutien scolaire" class="w-full h-full object-cover"/>
   </div>
   <div class="p-6">
     <h3 class="text-xl font-bold mb-2">Flyer – Centre de soutien scolaire</h3>
@@ -1010,238 +944,130 @@
       <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Photoshop</span>
       <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Design graphique</span>
     </div>
-    <div
-      class="project-overlay opacity-0 group-hover:opacity-100 absolute inset-0 bg-black/80 flex flex-col justify-center items-center p-6 transition-opacity duration-300"
-    >
-      <h3 class="text-white text-xl font-bold mb-2">Flyer – Centre de soutien scolaire</h3>
-      <p class="text-yellow-400 text-center mb-4 font-semibold">
+    <div class="project-overlay opacity-0 group-hover:opacity-100 absolute inset-0 bg-black/80 flex flex-col justify-center items-center p-4 sm:p-6 transition-opacity duration-300 rounded-xl">
+      <h3 class="text-white text-lg sm:text-xl font-bold mb-2 text-center">Flyer – Centre de soutien scolaire</h3>
+      <p class="text-yellow-400 text-center mb-4 font-semibold text-sm sm:text-base">
         Flyer pour informer et attirer élèves et parents sur les services pédagogiques offerts.
       </p>
-      <div class="flex space-x-3">
-        <a
-          href="#"
-          class="voir-design-btn px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors"
-          data-image="assets/img/cours_affiche.png"
-          data-caption="Soutien scolaire – Inscrivez vos enfants !"
-        >Voir le design</a>
-        <a
-          href="assets/img/cours_affiche.png"
-          download
-          class="px-4 py-2 border border-white text-white hover:bg-white/10 rounded-lg font-medium transition-colors"
-        >Télécharger</a>
+      <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-3">
+        <a href="#" class="voir-design-btn px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors text-sm sm:text-base" data-image="assets/img/cours_affiche.png" data-caption="Soutien scolaire – Inscrivez vos enfants !">Voir le design</a>
+        <a href="assets/img/cours_affiche.png" download class="px-4 py-2 border border-white text-white hover:bg-white/10 rounded-lg font-medium transition-colors text-sm sm:text-base">Télécharger</a>
       </div>
     </div>
   </div>
 </div>
 
-<!-- Projet Design : Flyer Entreprise – Bon Week-end -->
-<div
-  class="project-card group bg-white dark:bg-dark-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 relative"
-  data-category="design"
->
+<!-- Projet Design 8 -->
+<div class="project-card group bg-white dark:bg-dark-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 relative" data-category="design">
   <div class="h-48 overflow-hidden">
-    <img
-      src="assets/img/ENTRPRISE E-TECHNOLOGY_Weekend.png"
-      alt="Flyer Entreprise – Bon Week-end"
-      class="w-full h-full object-cover"
-    />
+    <img src="assets/img/ENTRPRISE E-TECHNOLOGY_Weekend.png" alt="Flyer Entreprise – Bon Week-end" class="w-full h-full object-cover"/>
   </div>
   <div class="p-6">
     <h3 class="text-xl font-bold mb-2">Flyer Entreprise – Bon Week-end 🌟</h3>
     <p class="text-gray-600 dark:text-gray-400 mb-4">
-      Flyer conçu pour souhaiter un <strong>bon week-end</strong> tout en présentant les
-      <strong>services clés</strong> de l’entreprise avec un design moderne et convivial.
+      Flyer conçu pour souhaiter un <strong>bon week-end</strong> tout en présentant les <strong>services clés</strong> de l’entreprise avec un design moderne et convivial.
     </p>
-
     <div class="flex flex-wrap gap-2 mb-4">
       <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Graphisme</span>
       <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Web</span>
       <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Design</span>
       <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Entreprise</span>
     </div>
-
-    <!-- Overlay au survol -->
-    <div
-      class="project-overlay opacity-0 group-hover:opacity-100 absolute inset-0 bg-black/80 flex flex-col justify-center items-center p-6 transition-opacity duration-300"
-    >
-      <h3 class="text-white text-xl font-bold mb-2 text-center">
-        🌞 Bon week-end à tous nos clients !
-      </h3>
-      <p class="text-yellow-400 text-center mb-4 font-semibold leading-relaxed">
+    <div class="project-overlay opacity-0 group-hover:opacity-100 absolute inset-0 bg-black/80 flex flex-col justify-center items-center p-4 sm:p-6 transition-opacity duration-300 rounded-xl">
+      <h3 class="text-white text-lg sm:text-xl font-bold mb-2 text-center">🌞 Bon week-end à tous nos clients !</h3>
+      <p class="text-yellow-400 text-center mb-4 font-semibold text-sm sm:text-base leading-relaxed">
         Nos services : 🎨 Logo – 💳 Carte de visite – 🖼️ Banderole – 📰 Flyers – 🌐 Site web – 💼 Portfolio – 📱 Application.
       </p>
-      <div class="flex space-x-3">
-        <a
-          href="#"
-          class="voir-design-btn px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors"
-          data-image="assets/img/ENTRPRISE E-TECHNOLOGY_Weekend.png"
-          data-caption="Flyer Entreprise – Bon Week-end"
-        >Voir le design</a>
-        <a
-          href="assets/img/ENTRPRISE E-TECHNOLOGY_Weekend.png"
-          download
-          class="px-4 py-2 border border-white text-white hover:bg-white/10 rounded-lg font-medium transition-colors"
-        >Télécharger</a>
+      <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-3">
+        <a href="#" class="voir-design-btn px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors text-sm sm:text-base" data-image="assets/img/ENTRPRISE E-TECHNOLOGY_Weekend.png" data-caption="Flyer Entreprise – Bon Week-end">Voir le design</a>
+        <a href="assets/img/ENTRPRISE E-TECHNOLOGY_Weekend.png" download class="px-4 py-2 border border-white text-white hover:bg-white/10 rounded-lg font-medium transition-colors text-sm sm:text-base">Télécharger</a>
       </div>
     </div>
   </div>
 </div>
 
-
-
-
 <!-- Projet Design 9 -->
-<div
-  class="project-card group bg-white dark:bg-dark-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 relative"
-  data-category="design"
->
+<div class="project-card group bg-white dark:bg-dark-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 relative" data-category="design">
   <div class="h-48 overflow-hidden">
-    <img
-      src="assets/img/annonce_cours.png"
-      alt="Flyer Cours de Répétition"
-      class="w-full h-full object-cover"
-    />
+    <img src="assets/img/annonce_cours.png" alt="Flyer Cours de Répétition" class="w-full h-full object-cover"/>
   </div>
   <div class="p-6">
     <h3 class="text-xl font-bold mb-2">Flyer – Cours de Répétition</h3>
     <p class="text-gray-600 dark:text-gray-400 mb-4">
-      Conception d’un flyer destiné aux parents pour les sensibiliser sur l’importance des cours de répétition. 
-      Avec la rentrée déjà proche, il invite à inscrire les enfants afin de mieux les préparer aux examens.
+      Conception d’un flyer destiné aux parents pour les sensibiliser sur l’importance des cours de répétition.
     </p>
     <div class="flex flex-wrap gap-2 mb-4">
       <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Éducation</span>
       <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Communication</span>
     </div>
-    <div
-      class="project-overlay opacity-0 group-hover:opacity-100 absolute inset-0 bg-black/80 flex flex-col justify-center items-center p-6 transition-opacity duration-300"
-    >
-      <h3 class="text-white text-xl font-bold mb-2">Flyer – Cours de Répétition</h3>
-      <p class="text-yellow-400 text-center mb-4 font-medium">
-        Parents, la rentrée est déjà là !  
-        Offrez à vos enfants un accompagnement de qualité grâce aux cours de répétition pour réussir leurs examens.
+    <div class="project-overlay opacity-0 group-hover:opacity-100 absolute inset-0 bg-black/80 flex flex-col justify-center items-center p-4 sm:p-6 transition-opacity duration-300 rounded-xl">
+      <h3 class="text-white text-lg sm:text-xl font-bold mb-2 text-center">Flyer – Cours de Répétition</h3>
+      <p class="text-yellow-400 text-center mb-4 font-medium text-sm sm:text-base">
+        Parents, la rentrée est déjà là ! Offrez à vos enfants un accompagnement de qualité grâce aux cours de répétition pour réussir leurs examens.
       </p>
-      <div class="flex space-x-3">
-        <a
-          href="#"
-          class="voir-design-btn px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors"
-          data-image="assets/img/annonce_cours.png"
-          data-caption="Flyer – Cours de Répétition"
-        >Voir le design</a>
-        <a
-          href="assets/img/annonce_cours.png"
-          download
-          class="px-4 py-2 border border-white text-white hover:bg-white/10 rounded-lg font-medium transition-colors"
-        >Télécharger</a>
+      <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-3">
+        <a href="#" class="voir-design-btn px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors text-sm sm:text-base" data-image="assets/img/annonce_cours.png" data-caption="Flyer – Cours de Répétition">Voir le design</a>
+        <a href="assets/img/annonce_cours.png" download class="px-4 py-2 border border-white text-white hover:bg-white/10 rounded-lg font-medium transition-colors text-sm sm:text-base">Télécharger</a>
       </div>
     </div>
   </div>
 </div>
 
 <!-- Projet Design 10 -->
-<div
-  class="project-card group bg-white dark:bg-dark-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 relative"
-  data-category="design"
->
+<div class="project-card group bg-white dark:bg-dark-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 relative" data-category="design">
   <div class="h-48 overflow-hidden">
-    <img
-      src="assets/img/prisma1.png"
-      alt="Flyer Jeu Concours Prisma"
-      class="w-full h-full object-cover"
-    />
+    <img src="assets/img/prisma1.png" alt="Flyer Jeu Concours Prisma" class="w-full h-full object-cover"/>
   </div>
   <div class="p-6">
     <h3 class="text-xl font-bold mb-2">Flyer – Jeu Concours Prisma</h3>
     <p class="text-gray-600 dark:text-gray-400 mb-4">
-      Conception d’un flyer pour l’entreprise <strong>Prisma</strong>, annonçant un jeu concours ludique où les participants doivent remettre les mots dans le bon ordre pour gagner des cadeaux attractifs.
+      Conception d’un flyer pour l’entreprise <strong>Prisma</strong>, annonçant un jeu concours ludique.
     </p>
     <div class="flex flex-wrap gap-2 mb-4">
       <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Événement</span>
       <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Communication</span>
       <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Design graphique</span>
     </div>
-    <div
-      class="project-overlay opacity-0 group-hover:opacity-100 absolute inset-0 bg-black/80 flex flex-col justify-center items-center p-6 transition-opacity duration-300"
-    >
-      <h3 class="text-white text-xl font-bold mb-2">Jeu Concours Prisma 🎉</h3>
-      <p class="text-yellow-400 text-center mb-4 font-semibold">
-        Remets les mots dans le bon ordre…  
-        et repars avec un super cadeau offert par Prisma !  
-        🎁 Participez et tentez votre chance !
+    <div class="project-overlay opacity-0 group-hover:opacity-100 absolute inset-0 bg-black/80 flex flex-col justify-center items-center p-4 sm:p-6 transition-opacity duration-300 rounded-xl">
+      <h3 class="text-white text-lg sm:text-xl font-bold mb-2 text-center">Jeu Concours Prisma 🎉</h3>
+      <p class="text-yellow-400 text-center mb-4 font-semibold text-sm sm:text-base">
+        Remets les mots dans le bon ordre… et repars avec un super cadeau offert par Prisma ! 🎁
       </p>
-      <div class="flex space-x-3">
-        <a
-          href="#"
-          class="voir-design-btn px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors"
-          data-image="assets/img/prisma1.png"
-          data-caption="Flyer – Jeu Concours Prisma"
-        >Voir le design</a>
-        <a
-          href="assets/img/prisma1.png"
-          download
-          class="px-4 py-2 border border-white text-white hover:bg-white/10 rounded-lg font-medium transition-colors"
-        >Télécharger</a>
+      <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-3">
+        <a href="#" class="voir-design-btn px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors text-sm sm:text-base" data-image="assets/img/prisma1.png" data-caption="Flyer – Jeu Concours Prisma">Voir le design</a>
+        <a href="assets/img/prisma1.png" download class="px-4 py-2 border border-white text-white hover:bg-white/10 rounded-lg font-medium transition-colors text-sm sm:text-base">Télécharger</a>
       </div>
     </div>
   </div>
 </div>
 
-
 <!-- Projet Design 11 -->
-<div
-  class="project-card group bg-white dark:bg-dark-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 relative"
-  data-category="design"
->
+<div class="project-card group bg-white dark:bg-dark-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 relative" data-category="design">
   <div class="h-48 overflow-hidden">
-    <img
-      src="assets/img/Sans titre-2.png"
-      alt="Affiche Concert Religieux"
-      class="w-full h-full object-cover"
-    />
+    <img src="assets/img/Sans titre-2.png" alt="Affiche Concert Religieux" class="w-full h-full object-cover"/>
   </div>
   <div class="p-6">
     <h3 class="text-xl font-bold mb-2">Affiche – Concert Religieux</h3>
     <p class="text-gray-600 dark:text-gray-400 mb-4">
-      Conception d’une <strong>affiche spirituelle</strong> pour annoncer un grand concert de musique religieuse à l’église.  
-      Une invitation ouverte à tous les fidèles pour louer et adorer dans la joie et la communion fraternelle.
+      Conception d’une <strong>affiche spirituelle</strong> pour annoncer un grand concert de musique religieuse à l’église.
     </p>
     <div class="flex flex-wrap gap-2 mb-4">
       <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Événement</span>
       <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Musique</span>
       <span class="px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-800 dark:text-gray-200 rounded text-xs">Design graphique</span>
     </div>
-    <div
-      class="project-overlay opacity-0 group-hover:opacity-100 absolute inset-0 bg-black/80 flex flex-col justify-center items-center p-6 transition-opacity duration-300"
-    >
-      <h3 class="text-white text-xl font-bold mb-2">Concert de Musique Religieuse 🎶</h3>
-      <p class="text-yellow-400 text-center mb-4 font-semibold">
-        📅 Rejoignez-nous pour une soirée de louange et d’adoration à l’église !  
-        🎤 Venez nombreux avec vos proches, partageons ensemble la foi et la joie en musique.  
+    <div class="project-overlay opacity-0 group-hover:opacity-100 absolute inset-0 bg-black/80 flex flex-col justify-center items-center p-4 sm:p-6 transition-opacity duration-300 rounded-xl">
+      <h3 class="text-white text-lg sm:text-xl font-bold mb-2 text-center">Concert de Musique Religieuse 🎶</h3>
+      <p class="text-yellow-400 text-center mb-4 font-semibold text-sm sm:text-base">
+        📅 Rejoignez-nous pour une soirée de louange et d’adoration à l’église ! 🎤 Venez nombreux avec vos proches.
       </p>
-      <div class="flex space-x-3">
-        <a
-          href="#"
-          class="voir-design-btn px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors"
-          data-image="assets/img/Sans titre-2.png"
-          data-caption="Affiche – Concert Religieux"
-        >Voir le design</a>
-        <a
-          href="assets/img/Sans titre-2.png"
-          download
-          class="px-4 py-2 border border-white text-white hover:bg-white/10 rounded-lg font-medium transition-colors"
-        >Télécharger</a>
+      <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-3">
+        <a href="#" class="voir-design-btn px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors text-sm sm:text-base" data-image="assets/img/Sans titre-2.png" data-caption="Affiche – Concert Religieux">Voir le design</a>
+        <a href="assets/img/Sans titre-2.png" download class="px-4 py-2 border border-white text-white hover:bg-white/10 rounded-lg font-medium transition-colors text-sm sm:text-base">Télécharger</a>
       </div>
     </div>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
 </section>
 <!-- Bouton WhatsApp flottant -->
 <a href="https://wa.me/23759322137?text=Bonjour%20Frank%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services%20de%20développement%20et%20design." 
